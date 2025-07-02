@@ -23,7 +23,7 @@ public:
     {
         if (Admin->objectName().isEmpty())
             Admin->setObjectName("Admin");
-        Admin->resize(400, 300);
+        Admin->resize(800, 600);
 
         retranslateUi(Admin);
 

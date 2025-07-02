@@ -3,6 +3,7 @@
 #include "normal.h"
 #include "admin.h"
 #include "signup.h"
+#include <QDialog>
 
 LogIn::LogIn(QWidget *parent)
     : QWidget(parent)
@@ -32,6 +33,18 @@ void LogIn::on_signInButton_clicked()
     Admin *admin = new Admin;
     admin->show();
     this->close();
+
+    // else if ( 일반회원 )
+    /*
+     * Normal *normal = new Normal;
+     * normal->show();
+     * this->close();
+     */
+
+    // else // 잘못된 회원 정보
+    /*
+     * dialog 출력
+     */
 }
 
 

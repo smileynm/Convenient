@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Cancel</string>
+    <string>취 소</string>
    </property>
   </widget>
   <widget class="QGroupBox" name="groupBox_SignIn">
@@ -95,7 +95,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Sign In</string>
+    <string>로그인</string>
    </property>
   </widget>
   <widget class="QPushButton" name="signUpButton">
@@ -108,7 +108,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Sign Up</string>
+    <string>회원가입</string>
    </property>
   </widget>
  </widget>

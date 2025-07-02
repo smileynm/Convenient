@@ -69,12 +69,12 @@ public:
     void retranslateUi(QWidget *LogIn)
     {
         LogIn->setWindowTitle(QCoreApplication::translate("LogIn", "Form", nullptr));
-        cancelButton->setText(QCoreApplication::translate("LogIn", "Cancel", nullptr));
+        cancelButton->setText(QCoreApplication::translate("LogIn", "\354\267\250 \354\206\214", nullptr));
         groupBox_SignIn->setTitle(QString());
         label_ID->setText(QCoreApplication::translate("LogIn", "ID :", nullptr));
         label_PW->setText(QCoreApplication::translate("LogIn", "PW :", nullptr));
-        signInButton->setText(QCoreApplication::translate("LogIn", "Sign In", nullptr));
-        signUpButton->setText(QCoreApplication::translate("LogIn", "Sign Up", nullptr));
+        signInButton->setText(QCoreApplication::translate("LogIn", "\353\241\234\352\267\270\354\235\270", nullptr));
+        signUpButton->setText(QCoreApplication::translate("LogIn", "\355\232\214\354\233\220\352\260\200\354\236\205", nullptr));
     } // retranslateUi
 
 };

@@ -29,11 +29,12 @@ public:
     QLabel *label_name;
     QPushButton *confirmButton;
     QPushButton *cancelButton;
-    QLineEdit *lineEdit;
-    QLineEdit *lineEdit_2;
-    QLineEdit *lineEdit_3;
-    QLineEdit *lineEdit_4;
-    QPushButton *confirmButton_2;
+    QLineEdit *nameEdit;
+    QLineEdit *idEdit;
+    QLineEdit *pwEdit;
+    QLineEdit *ckpwEdit;
+    QPushButton *dupButton;
+    QLabel *dupLabel;
 
     void setupUi(QWidget *SignUp)
     {
@@ -61,21 +62,27 @@ public:
         cancelButton = new QPushButton(groupBox);
         cancelButton->setObjectName("cancelButton");
         cancelButton->setGeometry(QRect(290, 250, 90, 30));
-        lineEdit = new QLineEdit(groupBox);
-        lineEdit->setObjectName("lineEdit");
-        lineEdit->setGeometry(QRect(120, 50, 170, 30));
-        lineEdit_2 = new QLineEdit(groupBox);
-        lineEdit_2->setObjectName("lineEdit_2");
-        lineEdit_2->setGeometry(QRect(120, 100, 170, 30));
-        lineEdit_3 = new QLineEdit(groupBox);
-        lineEdit_3->setObjectName("lineEdit_3");
-        lineEdit_3->setGeometry(QRect(120, 150, 170, 30));
-        lineEdit_4 = new QLineEdit(groupBox);
-        lineEdit_4->setObjectName("lineEdit_4");
-        lineEdit_4->setGeometry(QRect(120, 200, 170, 30));
-        confirmButton_2 = new QPushButton(groupBox);
-        confirmButton_2->setObjectName("confirmButton_2");
-        confirmButton_2->setGeometry(QRect(300, 100, 80, 30));
+        nameEdit = new QLineEdit(groupBox);
+        nameEdit->setObjectName("nameEdit");
+        nameEdit->setGeometry(QRect(120, 50, 170, 30));
+        idEdit = new QLineEdit(groupBox);
+        idEdit->setObjectName("idEdit");
+        idEdit->setGeometry(QRect(120, 100, 170, 30));
+        pwEdit = new QLineEdit(groupBox);
+        pwEdit->setObjectName("pwEdit");
+        pwEdit->setGeometry(QRect(120, 150, 170, 30));
+        ckpwEdit = new QLineEdit(groupBox);
+        ckpwEdit->setObjectName("ckpwEdit");
+        ckpwEdit->setGeometry(QRect(120, 200, 170, 30));
+        dupButton = new QPushButton(groupBox);
+        dupButton->setObjectName("dupButton");
+        dupButton->setGeometry(QRect(300, 100, 80, 30));
+        dupLabel = new QLabel(groupBox);
+        dupLabel->setObjectName("dupLabel");
+        dupLabel->setGeometry(QRect(120, 130, 171, 20));
+        QFont font;
+        font.setPointSize(8);
+        dupLabel->setFont(font);
 
         retranslateUi(SignUp);
 
@@ -92,7 +99,8 @@ public:
         label_name->setText(QCoreApplication::translate("SignUp", "Name :", nullptr));
         confirmButton->setText(QCoreApplication::translate("SignUp", "\355\231\225 \354\235\270", nullptr));
         cancelButton->setText(QCoreApplication::translate("SignUp", "\354\267\250 \354\206\214", nullptr));
-        confirmButton_2->setText(QCoreApplication::translate("SignUp", "\354\244\221\353\263\265\352\262\200\354\202\254", nullptr));
+        dupButton->setText(QCoreApplication::translate("SignUp", "\354\244\221\353\263\265\352\262\200\354\202\254", nullptr));
+        dupLabel->setText(QString());
     } // retranslateUi
 
 };

@@ -23,7 +23,7 @@ public:
     {
         if (Normal->objectName().isEmpty())
             Normal->setObjectName("Normal");
-        Normal->resize(400, 300);
+        Normal->resize(800, 600);
 
         retranslateUi(Normal);
 

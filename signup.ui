@@ -103,7 +103,7 @@
      <string>취 소</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="nameEdit">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -113,7 +113,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="idEdit">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -123,7 +123,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_3">
+   <widget class="QLineEdit" name="pwEdit">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -133,7 +133,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_4">
+   <widget class="QLineEdit" name="ckpwEdit">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -143,7 +143,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="confirmButton_2">
+   <widget class="QPushButton" name="dupButton">
     <property name="geometry">
      <rect>
       <x>300</x>
@@ -154,6 +154,24 @@
     </property>
     <property name="text">
      <string>중복검사</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="dupLabel">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>130</y>
+      <width>171</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
   </widget>
