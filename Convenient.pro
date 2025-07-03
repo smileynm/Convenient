@@ -12,7 +12,6 @@ SOURCES += \
     admin.cpp \
     adminchatform.cpp \
     admininfoform.cpp \
-    admininfoform.cpp \
     adminorderlistform.cpp \
     adminproductform.cpp \
     login.cpp \
@@ -24,7 +23,6 @@ HEADERS += \
     admin.h \
     adminchatform.h \
     admininfoform.h \
-    admininfoform.h \
     adminorderlistform.h \
     adminproductform.h \
     login.h \
@@ -34,7 +32,6 @@ HEADERS += \
 FORMS += \
     admin.ui \
     adminchatform.ui \
-    admininfoform.ui \
     admininfoform.ui \
     adminorderlistform.ui \
     adminproductform.ui \
