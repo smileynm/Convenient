@@ -10,6 +10,11 @@ CONFIG += c++17
 
 SOURCES += \
     admin.cpp \
+    adminchatform.cpp \
+    admininfoform.cpp \
+    admininfoform.cpp \
+    adminorderlistform.cpp \
+    adminproductform.cpp \
     login.cpp \
     main.cpp \
     normal.cpp \
@@ -17,12 +22,22 @@ SOURCES += \
 
 HEADERS += \
     admin.h \
+    adminchatform.h \
+    admininfoform.h \
+    admininfoform.h \
+    adminorderlistform.h \
+    adminproductform.h \
     login.h \
     normal.h \
     signup.h
 
 FORMS += \
     admin.ui \
+    adminchatform.ui \
+    admininfoform.ui \
+    admininfoform.ui \
+    adminorderlistform.ui \
+    adminproductform.ui \
     login.ui \
     normal.ui \
     signup.ui

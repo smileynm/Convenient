@@ -1,19 +1,22 @@
 #ifndef ADMIN_H
 #define ADMIN_H
 
-#include <QWidget>
+#include <QMainWindow>
 
 namespace Ui {
 class Admin;
 }
 
-class Admin : public QWidget
+class Admin : public QMainWindow
 {
     Q_OBJECT
 
 public:
     explicit Admin(QWidget *parent = nullptr);
     ~Admin();
+
+private slots:
+    void on_actionQuit_triggered();
 
 private:
     Ui::Admin *ui;

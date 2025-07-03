@@ -26,7 +26,7 @@
     <string>취 소</string>
    </property>
   </widget>
-  <widget class="QGroupBox" name="groupBox_SignIn">
+  <widget class="QGroupBox" name="logInGroupBox">
    <property name="geometry">
     <rect>
      <x>9</x>
@@ -38,7 +38,7 @@
    <property name="title">
     <string/>
    </property>
-   <widget class="QLabel" name="label_ID">
+   <widget class="QLabel" name="idLabel">
     <property name="geometry">
      <rect>
       <x>18</x>
@@ -51,7 +51,7 @@
      <string>ID :</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_PW">
+   <widget class="QLabel" name="pwLabel">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -64,7 +64,7 @@
      <string>PW :</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_ID">
+   <widget class="QLineEdit" name="idEdit">
     <property name="geometry">
      <rect>
       <x>50</x>
@@ -74,7 +74,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_PW">
+   <widget class="QLineEdit" name="pwEdit">
     <property name="geometry">
      <rect>
       <x>50</x>
@@ -85,7 +85,7 @@
     </property>
    </widget>
   </widget>
-  <widget class="QPushButton" name="signInButton">
+  <widget class="QPushButton" name="logInButton">
    <property name="geometry">
     <rect>
      <x>283</x>

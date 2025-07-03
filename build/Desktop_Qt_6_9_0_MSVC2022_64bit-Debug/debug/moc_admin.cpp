@@ -38,10 +38,14 @@ template <> constexpr inline auto Admin::qt_create_metaobjectdata<qt_meta_tag_ZN
 {
     namespace QMC = QtMocConstants;
     QtMocHelpers::StringRefStorage qt_stringData {
-        "Admin"
+        "Admin",
+        "on_actionQuit_triggered",
+        ""
     };
 
     QtMocHelpers::UintData qt_methods {
+        // Slot 'on_actionQuit_triggered'
+        QtMocHelpers::SlotData<void()>(1, 2, QMC::AccessPrivate, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -51,7 +55,7 @@ template <> constexpr inline auto Admin::qt_create_metaobjectdata<qt_meta_tag_ZN
             qt_methods, qt_properties, qt_enums);
 }
 Q_CONSTINIT const QMetaObject Admin::staticMetaObject = { {
-    QMetaObject::SuperData::link<QWidget::staticMetaObject>(),
+    QMetaObject::SuperData::link<QMainWindow::staticMetaObject>(),
     qt_staticMetaObjectStaticContent<qt_meta_tag_ZN5AdminE_t>.stringdata,
     qt_staticMetaObjectStaticContent<qt_meta_tag_ZN5AdminE_t>.data,
     qt_static_metacall,
@@ -63,9 +67,12 @@ Q_CONSTINIT const QMetaObject Admin::staticMetaObject = { {
 void Admin::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     auto *_t = static_cast<Admin *>(_o);
-    (void)_t;
-    (void)_c;
-    (void)_id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        switch (_id) {
+        case 0: _t->on_actionQuit_triggered(); break;
+        default: ;
+        }
+    }
     (void)_a;
 }
 
@@ -79,12 +86,24 @@ void *Admin::qt_metacast(const char *_clname)
     if (!_clname) return nullptr;
     if (!strcmp(_clname, qt_staticMetaObjectStaticContent<qt_meta_tag_ZN5AdminE_t>.strings))
         return static_cast<void*>(this);
-    return QWidget::qt_metacast(_clname);
+    return QMainWindow::qt_metacast(_clname);
 }
 
 int Admin::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
-    _id = QWidget::qt_metacall(_c, _id, _a);
+    _id = QMainWindow::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 1)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 1;
+    }
+    if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        if (_id < 1)
+            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
+        _id -= 1;
+    }
     return _id;
 }
 QT_WARNING_POP

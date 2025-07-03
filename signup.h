@@ -25,9 +25,12 @@ private slots:
     void on_pwEdit_cursorPositionChanged(int arg1, int arg2);
     void on_ckpwEdit_cursorPositionChanged(int arg1, int arg2);
 
+    void on_ckpwEdit_textChanged(const QString &arg1);
+
 private:
     Ui::SignUp *ui;
-    bool allow_flag;        // 회원가입 가능한 아이디 플래그
+    bool allow_flag_id;        // 회원가입 가능한 아이디 플래그
+    bool allow_flag_pw;        // 회원가입 가능한 비밀번호 플래그
 };
 
 #endif // SIGNUP_H

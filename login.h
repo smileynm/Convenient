@@ -17,10 +17,11 @@ public:
 
 private slots:
     void on_cancelButton_clicked();
-    void on_signInButton_clicked();
     void on_signUpButton_clicked();
-    void on_lineEdit_ID_returnPressed();
-    void on_lineEdit_PW_returnPressed();
+    void on_logInButton_clicked();
+    void on_idEdit_returnPressed();
+    void on_pwEdit_returnPressed();
+    void on_pwEdit_cursorPositionChanged(int arg1, int arg2);
 
 private:
     Ui::LogIn *ui;

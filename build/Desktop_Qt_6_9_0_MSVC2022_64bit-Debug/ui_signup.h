@@ -35,6 +35,7 @@ public:
     QLineEdit *ckpwEdit;
     QPushButton *dupButton;
     QLabel *dupLabel;
+    QLabel *ckpwLabel;
 
     void setupUi(QWidget *SignUp)
     {
@@ -79,10 +80,14 @@ public:
         dupButton->setGeometry(QRect(300, 100, 80, 30));
         dupLabel = new QLabel(groupBox);
         dupLabel->setObjectName("dupLabel");
-        dupLabel->setGeometry(QRect(120, 130, 171, 20));
+        dupLabel->setGeometry(QRect(120, 130, 170, 20));
         QFont font;
         font.setPointSize(8);
         dupLabel->setFont(font);
+        ckpwLabel = new QLabel(groupBox);
+        ckpwLabel->setObjectName("ckpwLabel");
+        ckpwLabel->setGeometry(QRect(120, 230, 170, 20));
+        ckpwLabel->setFont(font);
 
         retranslateUi(SignUp);
 
@@ -101,6 +106,7 @@ public:
         cancelButton->setText(QCoreApplication::translate("SignUp", "\354\267\250 \354\206\214", nullptr));
         dupButton->setText(QCoreApplication::translate("SignUp", "\354\244\221\353\263\265\352\262\200\354\202\254", nullptr));
         dupLabel->setText(QString());
+        ckpwLabel->setText(QString());
     } // retranslateUi
 
 };

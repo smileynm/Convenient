@@ -23,12 +23,12 @@ class Ui_LogIn
 {
 public:
     QPushButton *cancelButton;
-    QGroupBox *groupBox_SignIn;
-    QLabel *label_ID;
-    QLabel *label_PW;
-    QLineEdit *lineEdit_ID;
-    QLineEdit *lineEdit_PW;
-    QPushButton *signInButton;
+    QGroupBox *logInGroupBox;
+    QLabel *idLabel;
+    QLabel *pwLabel;
+    QLineEdit *idEdit;
+    QLineEdit *pwEdit;
+    QPushButton *logInButton;
     QPushButton *signUpButton;
 
     void setupUi(QWidget *LogIn)
@@ -39,24 +39,24 @@ public:
         cancelButton = new QPushButton(LogIn);
         cancelButton->setObjectName("cancelButton");
         cancelButton->setGeometry(QRect(279, 101, 88, 29));
-        groupBox_SignIn = new QGroupBox(LogIn);
-        groupBox_SignIn->setObjectName("groupBox_SignIn");
-        groupBox_SignIn->setGeometry(QRect(9, 8, 261, 81));
-        label_ID = new QLabel(groupBox_SignIn);
-        label_ID->setObjectName("label_ID");
-        label_ID->setGeometry(QRect(18, 13, 62, 20));
-        label_PW = new QLabel(groupBox_SignIn);
-        label_PW->setObjectName("label_PW");
-        label_PW->setGeometry(QRect(10, 47, 62, 20));
-        lineEdit_ID = new QLineEdit(groupBox_SignIn);
-        lineEdit_ID->setObjectName("lineEdit_ID");
-        lineEdit_ID->setGeometry(QRect(50, 10, 201, 28));
-        lineEdit_PW = new QLineEdit(groupBox_SignIn);
-        lineEdit_PW->setObjectName("lineEdit_PW");
-        lineEdit_PW->setGeometry(QRect(50, 44, 201, 28));
-        signInButton = new QPushButton(LogIn);
-        signInButton->setObjectName("signInButton");
-        signInButton->setGeometry(QRect(283, 8, 81, 81));
+        logInGroupBox = new QGroupBox(LogIn);
+        logInGroupBox->setObjectName("logInGroupBox");
+        logInGroupBox->setGeometry(QRect(9, 8, 261, 81));
+        idLabel = new QLabel(logInGroupBox);
+        idLabel->setObjectName("idLabel");
+        idLabel->setGeometry(QRect(18, 13, 62, 20));
+        pwLabel = new QLabel(logInGroupBox);
+        pwLabel->setObjectName("pwLabel");
+        pwLabel->setGeometry(QRect(10, 47, 62, 20));
+        idEdit = new QLineEdit(logInGroupBox);
+        idEdit->setObjectName("idEdit");
+        idEdit->setGeometry(QRect(50, 10, 201, 28));
+        pwEdit = new QLineEdit(logInGroupBox);
+        pwEdit->setObjectName("pwEdit");
+        pwEdit->setGeometry(QRect(50, 44, 201, 28));
+        logInButton = new QPushButton(LogIn);
+        logInButton->setObjectName("logInButton");
+        logInButton->setGeometry(QRect(283, 8, 81, 81));
         signUpButton = new QPushButton(LogIn);
         signUpButton->setObjectName("signUpButton");
         signUpButton->setGeometry(QRect(180, 100, 88, 29));
@@ -70,10 +70,10 @@ public:
     {
         LogIn->setWindowTitle(QCoreApplication::translate("LogIn", "Form", nullptr));
         cancelButton->setText(QCoreApplication::translate("LogIn", "\354\267\250 \354\206\214", nullptr));
-        groupBox_SignIn->setTitle(QString());
-        label_ID->setText(QCoreApplication::translate("LogIn", "ID :", nullptr));
-        label_PW->setText(QCoreApplication::translate("LogIn", "PW :", nullptr));
-        signInButton->setText(QCoreApplication::translate("LogIn", "\353\241\234\352\267\270\354\235\270", nullptr));
+        logInGroupBox->setTitle(QString());
+        idLabel->setText(QCoreApplication::translate("LogIn", "ID :", nullptr));
+        pwLabel->setText(QCoreApplication::translate("LogIn", "PW :", nullptr));
+        logInButton->setText(QCoreApplication::translate("LogIn", "\353\241\234\352\267\270\354\235\270", nullptr));
         signUpButton->setText(QCoreApplication::translate("LogIn", "\355\232\214\354\233\220\352\260\200\354\236\205", nullptr));
     } // retranslateUi
 

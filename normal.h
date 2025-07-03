@@ -1,13 +1,13 @@
 #ifndef NORMAL_H
 #define NORMAL_H
 
-#include <QWidget>
+#include <QMainWindow>
 
 namespace Ui {
 class Normal;
 }
 
-class Normal : public QWidget
+class Normal : public QMainWindow
 {
     Q_OBJECT
 

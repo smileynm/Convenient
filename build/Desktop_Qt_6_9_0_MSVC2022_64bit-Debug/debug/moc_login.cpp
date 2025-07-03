@@ -41,23 +41,30 @@ template <> constexpr inline auto LogIn::qt_create_metaobjectdata<qt_meta_tag_ZN
         "LogIn",
         "on_cancelButton_clicked",
         "",
-        "on_signInButton_clicked",
         "on_signUpButton_clicked",
-        "on_lineEdit_ID_returnPressed",
-        "on_lineEdit_PW_returnPressed"
+        "on_logInButton_clicked",
+        "on_idEdit_returnPressed",
+        "on_pwEdit_returnPressed",
+        "on_pwEdit_cursorPositionChanged",
+        "arg1",
+        "arg2"
     };
 
     QtMocHelpers::UintData qt_methods {
         // Slot 'on_cancelButton_clicked'
         QtMocHelpers::SlotData<void()>(1, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'on_signInButton_clicked'
-        QtMocHelpers::SlotData<void()>(3, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'on_signUpButton_clicked'
+        QtMocHelpers::SlotData<void()>(3, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'on_logInButton_clicked'
         QtMocHelpers::SlotData<void()>(4, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'on_lineEdit_ID_returnPressed'
+        // Slot 'on_idEdit_returnPressed'
         QtMocHelpers::SlotData<void()>(5, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'on_lineEdit_PW_returnPressed'
+        // Slot 'on_pwEdit_returnPressed'
         QtMocHelpers::SlotData<void()>(6, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'on_pwEdit_cursorPositionChanged'
+        QtMocHelpers::SlotData<void(int, int)>(7, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::Int, 8 }, { QMetaType::Int, 9 },
+        }}),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -82,14 +89,14 @@ void LogIn::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void 
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: _t->on_cancelButton_clicked(); break;
-        case 1: _t->on_signInButton_clicked(); break;
-        case 2: _t->on_signUpButton_clicked(); break;
-        case 3: _t->on_lineEdit_ID_returnPressed(); break;
-        case 4: _t->on_lineEdit_PW_returnPressed(); break;
+        case 1: _t->on_signUpButton_clicked(); break;
+        case 2: _t->on_logInButton_clicked(); break;
+        case 3: _t->on_idEdit_returnPressed(); break;
+        case 4: _t->on_pwEdit_returnPressed(); break;
+        case 5: _t->on_pwEdit_cursorPositionChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
         default: ;
         }
     }
-    (void)_a;
 }
 
 const QMetaObject *LogIn::metaObject() const
@@ -111,14 +118,14 @@ int LogIn::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 5)
+        if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 5;
+        _id -= 6;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 5)
+        if (_id < 6)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 5;
+        _id -= 6;
     }
     return _id;
 }

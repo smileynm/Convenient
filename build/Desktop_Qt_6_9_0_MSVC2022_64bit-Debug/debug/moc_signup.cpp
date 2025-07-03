@@ -43,7 +43,12 @@ template <> constexpr inline auto SignUp::qt_create_metaobjectdata<qt_meta_tag_Z
         "on_cancelButton_clicked",
         "",
         "on_dupButton_clicked",
-        "on_confirmButton_clicked"
+        "on_confirmButton_clicked",
+        "on_pwEdit_cursorPositionChanged",
+        "arg1",
+        "arg2",
+        "on_ckpwEdit_cursorPositionChanged",
+        "on_ckpwEdit_textChanged"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -53,6 +58,18 @@ template <> constexpr inline auto SignUp::qt_create_metaobjectdata<qt_meta_tag_Z
         QtMocHelpers::SlotData<void()>(3, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'on_confirmButton_clicked'
         QtMocHelpers::SlotData<void()>(4, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'on_pwEdit_cursorPositionChanged'
+        QtMocHelpers::SlotData<void(int, int)>(5, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::Int, 6 }, { QMetaType::Int, 7 },
+        }}),
+        // Slot 'on_ckpwEdit_cursorPositionChanged'
+        QtMocHelpers::SlotData<void(int, int)>(8, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::Int, 6 }, { QMetaType::Int, 7 },
+        }}),
+        // Slot 'on_ckpwEdit_textChanged'
+        QtMocHelpers::SlotData<void(const QString &)>(9, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::QString, 6 },
+        }}),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -79,10 +96,12 @@ void SignUp::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         case 0: _t->on_cancelButton_clicked(); break;
         case 1: _t->on_dupButton_clicked(); break;
         case 2: _t->on_confirmButton_clicked(); break;
+        case 3: _t->on_pwEdit_cursorPositionChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
+        case 4: _t->on_ckpwEdit_cursorPositionChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
+        case 5: _t->on_ckpwEdit_textChanged((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         default: ;
         }
     }
-    (void)_a;
 }
 
 const QMetaObject *SignUp::metaObject() const
@@ -104,14 +123,14 @@ int SignUp::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 6;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 3)
+        if (_id < 6)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 3;
+        _id -= 6;
     }
     return _id;
 }
