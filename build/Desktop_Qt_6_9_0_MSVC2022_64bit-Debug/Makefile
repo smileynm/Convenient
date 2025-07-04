@@ -321,12 +321,14 @@ Makefile: ..\..\Convenient.pro C:\Qt\6.9.0\msvc2022_64\mkspecs\win32-msvc\qmake.
 		..\..\Convenient.pro \
 		C:\Qt\6.9.0\msvc2022_64\lib\Qt6Widgets.prl \
 		C:\Qt\6.9.0\msvc2022_64\lib\Qt6Gui.prl \
+		C:\Qt\6.9.0\msvc2022_64\lib\Qt6Network.prl \
 		C:\Qt\6.9.0\msvc2022_64\lib\Qt6Core.prl \
 		C:\Qt\6.9.0\msvc2022_64\lib\Qt6EntryPoint.prl \
 		C:\Qt\6.9.0\msvc2022_64\mkspecs\features\build_pass.prf \
 		debug\qmake_qmake_qm_files.qrc \
 		C:\Qt\6.9.0\msvc2022_64\lib\Qt6Widgetsd.prl \
 		C:\Qt\6.9.0\msvc2022_64\lib\Qt6Guid.prl \
+		C:\Qt\6.9.0\msvc2022_64\lib\Qt6Networkd.prl \
 		C:\Qt\6.9.0\msvc2022_64\lib\Qt6Cored.prl \
 		C:\Qt\6.9.0\msvc2022_64\lib\Qt6EntryPointd.prl \
 		release\qmake_qmake_qm_files.qrc
@@ -568,12 +570,14 @@ C:\Qt\6.9.0\msvc2022_64\mkspecs\features\lex.prf:
 ..\..\Convenient.pro:
 C:\Qt\6.9.0\msvc2022_64\lib\Qt6Widgets.prl:
 C:\Qt\6.9.0\msvc2022_64\lib\Qt6Gui.prl:
+C:\Qt\6.9.0\msvc2022_64\lib\Qt6Network.prl:
 C:\Qt\6.9.0\msvc2022_64\lib\Qt6Core.prl:
 C:\Qt\6.9.0\msvc2022_64\lib\Qt6EntryPoint.prl:
 C:\Qt\6.9.0\msvc2022_64\mkspecs\features\build_pass.prf:
 debug\qmake_qmake_qm_files.qrc:
 C:\Qt\6.9.0\msvc2022_64\lib\Qt6Widgetsd.prl:
 C:\Qt\6.9.0\msvc2022_64\lib\Qt6Guid.prl:
+C:\Qt\6.9.0\msvc2022_64\lib\Qt6Networkd.prl:
 C:\Qt\6.9.0\msvc2022_64\lib\Qt6Cored.prl:
 C:\Qt\6.9.0\msvc2022_64\lib\Qt6EntryPointd.prl:
 release\qmake_qmake_qm_files.qrc:
