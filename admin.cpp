@@ -25,6 +25,7 @@ Admin::Admin(QWidget *parent)
     ui->tabWidget->addTab(adminchatform, tr("채팅서버"));
     ui->tabWidget->addTab(adminproductform, tr("상품관리"));
     ui->tabWidget->addTab(adminorderlistform, tr("발주목록"));
+
 }
 
 Admin::~Admin()

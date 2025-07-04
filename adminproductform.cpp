@@ -6,6 +6,8 @@ AdminProductForm::AdminProductForm(QWidget *parent)
     , ui(new Ui::AdminProductForm)
 {
     ui->setupUi(this);
+    ui->toolBox->setCurrentIndex(6);
+    ui->stackedWidget->setCurrentIndex(6);
 }
 
 AdminProductForm::~AdminProductForm()

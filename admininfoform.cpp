@@ -6,6 +6,8 @@ AdminInfoForm::AdminInfoForm(QWidget *parent)
     , ui(new Ui::AdminInfoForm)
 {
     ui->setupUi(this);
+    ui->toolBox->setCurrentIndex(1);
+    ui->stackedWidget->setCurrentIndex(1);
 }
 
 AdminInfoForm::~AdminInfoForm()

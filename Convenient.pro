@@ -17,6 +17,8 @@ SOURCES += \
     login.cpp \
     main.cpp \
     normal.cpp \
+    normalchatform.cpp \
+    normalorderform.cpp \
     signup.cpp
 
 HEADERS += \
@@ -27,6 +29,8 @@ HEADERS += \
     adminproductform.h \
     login.h \
     normal.h \
+    normalchatform.h \
+    normalorderform.h \
     signup.h
 
 FORMS += \
@@ -37,6 +41,8 @@ FORMS += \
     adminproductform.ui \
     login.ui \
     normal.ui \
+    normalchatform.ui \
+    normalorderform.ui \
     signup.ui
 
 TRANSLATIONS += \
