@@ -1,3 +1,4 @@
 #include "membermanager.h"
 
-MemberManager::MemberManager() {}
+MemberManager::MemberManager() {
+}

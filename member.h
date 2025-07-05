@@ -9,7 +9,8 @@ public:
     Member();
     ~Member();
     QString getMemberID();
-    bool isManager(Member);
+    QString getMemberName();
+    bool isManager();
 
 private:
     QString memberName;
