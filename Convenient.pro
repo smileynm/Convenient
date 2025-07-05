@@ -16,6 +16,8 @@ SOURCES += \
     adminproductform.cpp \
     login.cpp \
     main.cpp \
+    member.cpp \
+    membermanager.cpp \
     normal.cpp \
     normalchatform.cpp \
     normalorderform.cpp \
@@ -28,6 +30,8 @@ HEADERS += \
     adminorderlistform.h \
     adminproductform.h \
     login.h \
+    member.h \
+    membermanager.h \
     normal.h \
     normalchatform.h \
     normalorderform.h \
