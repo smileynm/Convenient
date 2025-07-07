@@ -1,0 +1,32 @@
+# Qt Creator/Project files
+*.pro.user
+*.pro.user.*
+*.creator.user
+*.creator.user.*
+
+# Build directories and generated files
+build/
+debug/
+release/
+Makefile*
+*.exe
+*.dll
+*.o
+*.obj
+*.a
+*.lib
+*.so
+moc_*.cpp
+ui_*.h
+qrc_*.cpp
+
+# IDE-specific files
+.idea/
+.vscode/
+*.VC.db
+*.suo
+*.VC.VC.opendb
+
+# OS-generated files
+.DS_Store
+Thumbs.db

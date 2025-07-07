@@ -2,6 +2,7 @@
 #define ADMININFOFORM_H
 
 #include <QWidget>
+#include <QWidget>
 
 namespace Ui {
 class AdminInfoForm;
@@ -17,6 +18,7 @@ public:
 
 private slots:
     void on_toolBox_currentChanged(int index);
+
 
 private:
     Ui::AdminInfoForm *ui;
