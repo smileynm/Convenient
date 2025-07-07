@@ -6,16 +6,17 @@
 class Member
 {
 public:
-    Member();
+    Member(QString memberID, QString memberName, QString memberPW);
     ~Member();
     QString getMemberID();
     QString getMemberName();
     bool isManager();
+    void setManager(bool managerFlag);
 
 private:
-    QString memberName;
-    QString memberID;
-    QString memberPW;
+    QString m_memberName;
+    QString m_memberID;
+    QString m_memberPW;
     bool managerFlag;
 };
 

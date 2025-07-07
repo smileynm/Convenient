@@ -14,6 +14,7 @@ SOURCES += \
     admininfoform.cpp \
     adminorderlistform.cpp \
     adminproductform.cpp \
+    jsonmanager.cpp \
     login.cpp \
     main.cpp \
     member.cpp \
@@ -29,6 +30,7 @@ HEADERS += \
     admininfoform.h \
     adminorderlistform.h \
     adminproductform.h \
+    jsonmanager.h \
     login.h \
     member.h \
     membermanager.h \
