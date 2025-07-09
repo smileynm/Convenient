@@ -15,7 +15,7 @@ bool JsonManager::loadMemberFromJson(MemberManager& memberManager, const QString
             qDebug() << "유효하지 않은 Json 파일이 로드됨";
             return false;
         }
-
+        // JsonArray에 Obj 형태로 저장
         QJsonArray membersArray = doc.array();
         for (auto it = membersArray.begin(); it != membersArray.end(); ++it) {
             if (!it->isObject())
