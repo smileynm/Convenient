@@ -1,5 +1,6 @@
 #include "membermanager.h"
 #include <QDebug>
+#include <QObject>
 
 MemberManager::MemberManager() {
     qDebug() << "MemberManager created.";
@@ -23,7 +24,7 @@ bool MemberManager::registerMember(Member* member, const QString& id) {
     }
 
     membersByID[id] = member;
-    qDebug() << "회원가입 완료:" << member->getMemberName() << "(" << id;
+    qDebug() << QObject::tr("회원가입 완료: %1 %2").arg(member->getMemberName()).arg(id);
     return true;
 }
 
