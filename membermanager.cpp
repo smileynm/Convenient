@@ -3,23 +3,23 @@
 #include <QObject>
 
 MemberManager::MemberManager() {
-    qDebug() << "MemberManager created.";
+    qDebug() << QObject::tr("MemberManager created.");
 }
 
 MemberManager::~MemberManager() {
     for (auto it = membersByID.begin(); it != membersByID.end(); ++it) {
         QString memberID = it.key();
         Member* member_ptr = it.value();
-        qDebug() << "Deleting member: " << member_ptr->getMemberName() << " (" << memberID << ")";
+        qDebug() << QObject::tr("Deleting member: %1 %2").arg(member_ptr->getMemberName()).arg(memberID);
         delete member_ptr; // Member 객체의 메모리 해제
     }
     membersByID.clear(); // 맵 비우기
-    qDebug() << "MemberManager destroyed.";
+    qDebug() << QObject::tr("MemberManager destroyed.");
 }
 
 bool MemberManager::registerMember(Member* member, const QString& id) {
     if (membersByID.count(id)) {
-        qDebug() << "에러: 이미 있는 회원 ID";
+        qDebug() << QObject::tr("에러: 이미 있는 회원 ID");
         return false;
     }
 
@@ -41,7 +41,7 @@ bool MemberManager::removeMember(const QString& memberID) {
     // 맵에서 ID로 회원 찾기
     auto it = membersByID.find(memberID);
     if (it == membersByID.end()) {
-        qDebug() << "Error: Member with ID " << memberID << " not found for removal.";
+        qDebug() << QObject::tr("Error: Member with ID %1").arg(memberID) << " not found for removal.";
         return false; // 회원이 없으면 탈퇴 실패
     }
 
@@ -50,6 +50,6 @@ bool MemberManager::removeMember(const QString& memberID) {
 
     // 맵에서 해당 항목 제거
     membersByID.erase(it);
-    qDebug() << "Member removed: " << memberID;
+    qDebug() << QObject::tr("Member removed: %1").arg(memberID);
     return true; // 탈퇴 성공
 }
