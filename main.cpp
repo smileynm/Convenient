@@ -3,6 +3,8 @@
 #include <QApplication>
 #include <QLocale>
 #include <QTranslator>
+#include "jsonmanager.h"
+#include "membermanager.h"
 
 int main(int argc, char *argv[])
 {
@@ -17,6 +19,11 @@ int main(int argc, char *argv[])
             break;
         }
     }
+
+    // JsonManager bringup
+    JsonManager *json = new JsonManager;
+    MemberManager *member = new MemberManager;
+    json->loadMemberFromJson(*member, "members.json");
     LogIn *login = new LogIn;
     login->show();
     return a.exec();

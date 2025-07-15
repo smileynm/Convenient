@@ -1,0 +1,62 @@
+[
+  {
+    "id": "user01",
+    "password": "pass01",
+    "name": "김철수",
+    "isManager": false
+  },
+  {
+    "id": "admin",
+    "password": "adminpass",
+    "name": "관리자",
+    "isManager": true
+  },
+  {
+    "id": "user02",
+    "password": "pass02",
+    "name": "이영희",
+    "isManager": false
+  },
+  {
+    "id": "user03",
+    "password": "pass03",
+    "name": "박민수",
+    "isManager": false
+  },
+  {
+    "id": "manager01",
+    "password": "mgrpass",
+    "name": "매니저1",
+    "isManager": true
+  },
+  {
+    "id": "user04",
+    "password": "pass04",
+    "name": "최지영",
+    "isManager": false
+  },
+  {
+    "id": "user05",
+    "password": "pass05",
+    "name": "정우진",
+    "isManager": false
+  },
+  {
+    "id": "user06",
+    "password": "pass06",
+    "name": "한아름",
+    "isManager": false
+  },
+  {
+    "id": "admin02",
+    "password": "superadmin",
+    "name": "총관리자",
+    "isManager": true
+  },
+  {
+    "id": "normal",
+    "password": "pass07",
+    "name": "유재석",
+    "isManager": false
+  }
+]
