@@ -20,10 +20,12 @@ int main(int argc, char *argv[])
         }
     }
 
-    // JsonManager bringup
+    // JsonManager bringup (실험용)
+    /****************************************************/
     JsonManager *json = new JsonManager;
     MemberManager *member = new MemberManager;
     json->loadMemberFromJson(*member, "members.json");
+    /****************************************************/
     LogIn *login = new LogIn;
     login->show();
     return a.exec();
