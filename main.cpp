@@ -23,8 +23,8 @@ int main(int argc, char *argv[])
     // JsonManager bringup (실험용)
     /****************************************************/
     JsonManager *json = new JsonManager;
-    MemberManager *member = new MemberManager;
-    json->loadMemberFromJson(*member, "members.json");
+    MemberManager& memberManager = MemberManager::getInstance();
+    json->loadMemberFromJson(memberManager, "members.json");
     /****************************************************/
     LogIn *login = new LogIn;
     login->show();

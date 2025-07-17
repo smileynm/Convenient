@@ -398,6 +398,14 @@ Makefile: ..\..\Convenient.pro C:\Qt\6.9.1\msvc2022_64\mkspecs\win32-msvc\qmake.
 		C:\Qt\6.9.1\msvc2022_64\mkspecs\modules\qt_lib_webchannel_private.pri \
 		C:\Qt\6.9.1\msvc2022_64\mkspecs\modules\qt_lib_webchannelquick.pri \
 		C:\Qt\6.9.1\msvc2022_64\mkspecs\modules\qt_lib_webchannelquick_private.pri \
+		C:\Qt\6.9.1\msvc2022_64\mkspecs\modules\qt_lib_webenginecore.pri \
+		C:\Qt\6.9.1\msvc2022_64\mkspecs\modules\qt_lib_webenginecore_private.pri \
+		C:\Qt\6.9.1\msvc2022_64\mkspecs\modules\qt_lib_webenginequick.pri \
+		C:\Qt\6.9.1\msvc2022_64\mkspecs\modules\qt_lib_webenginequick_private.pri \
+		C:\Qt\6.9.1\msvc2022_64\mkspecs\modules\qt_lib_webenginequickdelegatesqml.pri \
+		C:\Qt\6.9.1\msvc2022_64\mkspecs\modules\qt_lib_webenginequickdelegatesqml_private.pri \
+		C:\Qt\6.9.1\msvc2022_64\mkspecs\modules\qt_lib_webenginewidgets.pri \
+		C:\Qt\6.9.1\msvc2022_64\mkspecs\modules\qt_lib_webenginewidgets_private.pri \
 		C:\Qt\6.9.1\msvc2022_64\mkspecs\modules\qt_lib_websockets.pri \
 		C:\Qt\6.9.1\msvc2022_64\mkspecs\modules\qt_lib_websockets_private.pri \
 		C:\Qt\6.9.1\msvc2022_64\mkspecs\modules\qt_lib_webview.pri \
@@ -767,6 +775,14 @@ C:\Qt\6.9.1\msvc2022_64\mkspecs\modules\qt_lib_webchannel.pri:
 C:\Qt\6.9.1\msvc2022_64\mkspecs\modules\qt_lib_webchannel_private.pri:
 C:\Qt\6.9.1\msvc2022_64\mkspecs\modules\qt_lib_webchannelquick.pri:
 C:\Qt\6.9.1\msvc2022_64\mkspecs\modules\qt_lib_webchannelquick_private.pri:
+C:\Qt\6.9.1\msvc2022_64\mkspecs\modules\qt_lib_webenginecore.pri:
+C:\Qt\6.9.1\msvc2022_64\mkspecs\modules\qt_lib_webenginecore_private.pri:
+C:\Qt\6.9.1\msvc2022_64\mkspecs\modules\qt_lib_webenginequick.pri:
+C:\Qt\6.9.1\msvc2022_64\mkspecs\modules\qt_lib_webenginequick_private.pri:
+C:\Qt\6.9.1\msvc2022_64\mkspecs\modules\qt_lib_webenginequickdelegatesqml.pri:
+C:\Qt\6.9.1\msvc2022_64\mkspecs\modules\qt_lib_webenginequickdelegatesqml_private.pri:
+C:\Qt\6.9.1\msvc2022_64\mkspecs\modules\qt_lib_webenginewidgets.pri:
+C:\Qt\6.9.1\msvc2022_64\mkspecs\modules\qt_lib_webenginewidgets_private.pri:
 C:\Qt\6.9.1\msvc2022_64\mkspecs\modules\qt_lib_websockets.pri:
 C:\Qt\6.9.1\msvc2022_64\mkspecs\modules\qt_lib_websockets_private.pri:
 C:\Qt\6.9.1\msvc2022_64\mkspecs\modules\qt_lib_webview.pri:

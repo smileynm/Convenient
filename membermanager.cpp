@@ -2,6 +2,11 @@
 #include <QDebug>
 #include <QObject>
 
+MemberManager& MemberManager::getInstance() {
+    static MemberManager instance;
+    return instance;
+}
+
 MemberManager::MemberManager() {
     qDebug() << QObject::tr("MemberManager created.");
 }
