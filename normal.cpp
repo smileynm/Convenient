@@ -5,8 +5,7 @@
 
 Normal::Normal(QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::Normal)
-{
+    , ui(new Ui::Normal) {
     ui->setupUi(this);
 
     // 제목표시줄 설정 : 일반 점주 모드
@@ -21,7 +20,6 @@ Normal::Normal(QWidget *parent)
     ui->tabWidget->addTab(normalorderform, tr("발주관리"));
 }
 
-Normal::~Normal()
-{
+Normal::~Normal() {
     delete ui;
 }

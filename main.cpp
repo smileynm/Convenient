@@ -6,8 +6,7 @@
 #include "jsonmanager.h"
 #include "membermanager.h"
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
 
     QTranslator translator;
@@ -22,9 +21,9 @@ int main(int argc, char *argv[])
 
     // JsonManager bringup (실험용)
     /****************************************************/
-    JsonManager *json = new JsonManager;
+    JsonManager *jsonManager = new JsonManager;
     MemberManager& memberManager = MemberManager::getInstance();
-    json->loadMemberFromJson(memberManager, "members.json");
+    jsonManager->loadMemberFromJson(memberManager, "members.json");
     /****************************************************/
     LogIn *login = new LogIn;
     login->show();

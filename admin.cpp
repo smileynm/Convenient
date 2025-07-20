@@ -7,8 +7,7 @@
 
 Admin::Admin(QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::Admin)
-{
+    , ui(new Ui::Admin) {
     ui->setupUi(this);
 
     // 제목표시줄 설정 : 관리자모드
@@ -28,13 +27,11 @@ Admin::Admin(QWidget *parent)
 
 }
 
-Admin::~Admin()
-{
+Admin::~Admin() {
     delete ui;
 }
 
-void Admin::on_actionQuit_triggered()
-{
+void Admin::on_actionQuit_triggered() {
     QApplication::quit();
 }
 

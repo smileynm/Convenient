@@ -7,8 +7,7 @@ namespace Ui {
 class NormalChatForm;
 }
 
-class NormalChatForm : public QWidget
-{
+class NormalChatForm : public QWidget {
     Q_OBJECT
 
 public:

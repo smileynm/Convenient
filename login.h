@@ -7,8 +7,7 @@ namespace Ui {
 class LogIn;
 }
 
-class LogIn : public QWidget
-{
+class LogIn : public QWidget {
     Q_OBJECT
 
 public:

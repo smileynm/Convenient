@@ -8,8 +8,7 @@ namespace Ui {
 class SignUp;
 }
 
-class SignUp : public QWidget
-{
+class SignUp : public QWidget {
     Q_OBJECT
 
 public:
@@ -24,7 +23,6 @@ private slots:
     // 비밀번호가 보이지 않게 하기위한 slot
     void on_pwEdit_cursorPositionChanged(int arg1, int arg2);
     void on_ckpwEdit_cursorPositionChanged(int arg1, int arg2);
-
     void on_ckpwEdit_textChanged(const QString &arg1);
 
 private:

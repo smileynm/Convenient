@@ -11,14 +11,13 @@
 
 #include "membermanager.h"
 
-class JsonManager
-{
+class JsonManager {
 public:
     JsonManager();
 
     bool loadMemberFromJson(MemberManager& memberManager, const QString& filePath);
     //bool loadProductFromJson(const QString& filePath);
-    bool saveMemberToJson(const Member*);
+    bool addMemberToJson(QString id, QString name, QString pw);
     //bool saveProductToJson(const Product*);
 };
 

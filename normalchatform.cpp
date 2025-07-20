@@ -3,20 +3,17 @@
 
 NormalChatForm::NormalChatForm(QWidget *parent)
     : QWidget(parent)
-    , ui(new Ui::NormalChatForm)
-{
+    , ui(new Ui::NormalChatForm) {
     ui->setupUi(this);
     ui->toolBox->setCurrentIndex(1);
     ui->stackedWidget->setCurrentIndex(1);
 }
 
-NormalChatForm::~NormalChatForm()
-{
+NormalChatForm::~NormalChatForm() {
     delete ui;
 }
 
-void NormalChatForm::on_toolBox_currentChanged(int index)
-{
+void NormalChatForm::on_toolBox_currentChanged(int index) {
     ui->stackedWidget->setCurrentIndex(index); // toolBox와 stackedWidget 연동
     if (ui->toolBox->currentIndex() == 0) {
         ui->chatEdit->setReadOnly(true);
@@ -29,8 +26,7 @@ void NormalChatForm::on_toolBox_currentChanged(int index)
     }
 }
 
-void NormalChatForm::on_sendButton_clicked()
-{
+void NormalChatForm::on_sendButton_clicked() {
     // 공지사항 페이지에서 클릭할 경우, 미동작
     if (ui->toolBox->currentIndex() == 0) {
         ui->chatEdit->setTextColor(tr("gray"));

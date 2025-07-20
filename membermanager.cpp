@@ -58,3 +58,7 @@ bool MemberManager::removeMember(const QString& memberID) {
     qDebug() << QObject::tr("Member removed: %1").arg(memberID);
     return true; // 탈퇴 성공
 }
+
+const QMap<QString, Member*>& MemberManager::getMemberMap() const {
+    return membersByID;
+}

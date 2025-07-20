@@ -7,8 +7,7 @@ namespace Ui {
 class Normal;
 }
 
-class Normal : public QMainWindow
-{
+class Normal : public QMainWindow {
     Q_OBJECT
 
 public:

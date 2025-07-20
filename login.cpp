@@ -7,26 +7,22 @@
 
 LogIn::LogIn(QWidget *parent)
     : QWidget(parent)
-    , ui(new Ui::LogIn)
-{
+    , ui(new Ui::LogIn) {
     ui->setupUi(this);
 
     // 제목표시줄 설정 : Login
     setWindowTitle(tr("QT25 LogIn"));
 }
 
-LogIn::~LogIn()
-{
+LogIn::~LogIn() {
     delete ui;
 }
 
-void LogIn::on_cancelButton_clicked()
-{
+void LogIn::on_cancelButton_clicked() {
     QApplication::quit();
 }
 
-void LogIn::on_logInButton_clicked()
-{
+void LogIn::on_logInButton_clicked() {
     /* 분기 내용 */
     QString userid = ui->idEdit->text();
     QString userpw = ui->pwEdit->text();
@@ -54,27 +50,23 @@ void LogIn::on_logInButton_clicked()
      */
 }
 
-void LogIn::on_signUpButton_clicked()
-{
+void LogIn::on_signUpButton_clicked() {
     SignUp *signup = new SignUp;
     signup->show();
     this->close();
 }
 
-void LogIn::on_idEdit_returnPressed()
-{
+void LogIn::on_idEdit_returnPressed() {
     on_logInButton_clicked();
 }
 
 
-void LogIn::on_pwEdit_returnPressed()
-{
+void LogIn::on_pwEdit_returnPressed() {
     on_logInButton_clicked();
 }
 
 
-void LogIn::on_pwEdit_cursorPositionChanged(int arg1, int arg2)
-{
+void LogIn::on_pwEdit_cursorPositionChanged(int arg1, int arg2) {
     ui->pwEdit->setEchoMode(QLineEdit::Password);
 }
 

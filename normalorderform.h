@@ -7,8 +7,7 @@ namespace Ui {
 class NormalOrderForm;
 }
 
-class NormalOrderForm : public QWidget
-{
+class NormalOrderForm : public QWidget {
     Q_OBJECT
 
 public:

@@ -14,6 +14,7 @@ public:
     bool registerMember(Member* member, const QString& memberID);
     Member* findMemberByID(const QString& memberID);
     bool removeMember(const QString& memberID);
+    const QMap<QString, Member*>& getMemberMap() const;
 
 private:
     // 싱글턴 구현을 위한 생성자/소멸자의 private 접근제한

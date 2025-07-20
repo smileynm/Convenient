@@ -2,9 +2,9 @@
 #define MEMBER_H
 
 #include <QString>
+#include <QJsonObject>
 
-class Member
-{
+class Member {
 public:
     Member(QString memberID, QString memberName, QString memberPW);
     ~Member();
@@ -12,6 +12,7 @@ public:
     QString getMemberName();
     bool isManager();
     void setManager(bool managerFlag);
+    QJsonObject toJson() const;
 
 private:
     QString m_memberName;
