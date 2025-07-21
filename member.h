@@ -10,8 +10,9 @@ public:
     ~Member();
     QString getMemberID();
     QString getMemberName();
+    QString getMemberPW();
     bool isManager();
-    void setManager(bool managerFlag);
+    void setManager(bool m_Flag);
     QJsonObject toJson() const;
 
 private:

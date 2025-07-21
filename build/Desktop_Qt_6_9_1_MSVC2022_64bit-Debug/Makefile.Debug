@@ -1588,7 +1588,7 @@ debug\moc_membermanager.cpp: ..\..\membermanager.h \
 		C:\Qt\6.9.1\msvc2022_64\include\QtCore\qmap.h \
 		C:\Qt\6.9.1\msvc2022_64\include\QtCore\qshareddata.h \
 		C:\Qt\6.9.1\msvc2022_64\include\QtCore\qshareddata_impl.h \
-		..\..\Member.h \
+		..\..\member.h \
 		C:\Qt\6.9.1\msvc2022_64\include\QtCore\QJsonObject \
 		C:\Qt\6.9.1\msvc2022_64\include\QtCore\qjsonobject.h \
 		C:\Qt\6.9.1\msvc2022_64\include\QtCore\qjsonvalue.h \
@@ -2701,7 +2701,22 @@ debug\admin.obj: ..\..\admin.cpp ..\..\admin.h \
 		C:\Qt\6.9.1\msvc2022_64\include\QtWidgets\QWidget \
 		..\..\admininfoform.h \
 		..\..\adminproductform.h \
-		..\..\adminorderlistform.h
+		..\..\adminorderlistform.h \
+		..\..\membermanager.h \
+		C:\Qt\6.9.1\msvc2022_64\include\QtCore\QString \
+		C:\Qt\6.9.1\msvc2022_64\include\QtCore\QMap \
+		..\..\member.h \
+		C:\Qt\6.9.1\msvc2022_64\include\QtCore\QJsonObject \
+		C:\Qt\6.9.1\msvc2022_64\include\QtCore\qjsonobject.h \
+		C:\Qt\6.9.1\msvc2022_64\include\QtCore\qjsonvalue.h \
+		C:\Qt\6.9.1\msvc2022_64\include\QtCore\qcborvalue.h \
+		C:\Qt\6.9.1\msvc2022_64\include\QtCore\qcborcommon.h \
+		C:\Qt\6.9.1\msvc2022_64\include\QtCore\qdatetime.h \
+		C:\Qt\6.9.1\msvc2022_64\include\QtCore\qcalendar.h \
+		C:\Qt\6.9.1\msvc2022_64\include\QtCore\qregularexpression.h \
+		C:\Qt\6.9.1\msvc2022_64\include\QtCore\quuid.h \
+		C:\Qt\6.9.1\msvc2022_64\include\QtCore\qjsondocument.h \
+		C:\Qt\6.9.1\msvc2022_64\include\QtCore\qjsonparseerror.h
 
 debug\adminchatform.obj: ..\..\adminchatform.cpp ..\..\adminchatform.h \
 		C:\Qt\6.9.1\msvc2022_64\include\QtWidgets\QWidget \
@@ -3658,7 +3673,7 @@ debug\jsonmanager.obj: ..\..\jsonmanager.cpp ..\..\jsonmanager.h \
 		C:\Qt\6.9.1\msvc2022_64\include\QtCore\QString \
 		C:\Qt\6.9.1\msvc2022_64\include\QtCore\QObject \
 		C:\Qt\6.9.1\msvc2022_64\include\QtCore\QMap \
-		..\..\Member.h
+		..\..\member.h
 
 debug\login.obj: ..\..\login.cpp ..\..\login.h \
 		C:\Qt\6.9.1\msvc2022_64\include\QtWidgets\QWidget \
@@ -3874,8 +3889,26 @@ debug\login.obj: ..\..\login.cpp ..\..\login.h \
 		C:\Qt\6.9.1\msvc2022_64\include\QtGui\qtextcursor.h \
 		C:\Qt\6.9.1\msvc2022_64\include\QtGui\qtextformat.h \
 		C:\Qt\6.9.1\msvc2022_64\include\QtGui\qpen.h \
+		..\..\membermanager.h \
+		C:\Qt\6.9.1\msvc2022_64\include\QtCore\QString \
+		C:\Qt\6.9.1\msvc2022_64\include\QtCore\QMap \
+		..\..\member.h \
+		C:\Qt\6.9.1\msvc2022_64\include\QtCore\QJsonObject \
+		C:\Qt\6.9.1\msvc2022_64\include\QtCore\qjsonobject.h \
+		C:\Qt\6.9.1\msvc2022_64\include\QtCore\qjsonvalue.h \
+		C:\Qt\6.9.1\msvc2022_64\include\QtCore\qcborvalue.h \
+		C:\Qt\6.9.1\msvc2022_64\include\QtCore\qcborcommon.h \
+		C:\Qt\6.9.1\msvc2022_64\include\QtCore\qdatetime.h \
+		C:\Qt\6.9.1\msvc2022_64\include\QtCore\qcalendar.h \
+		C:\Qt\6.9.1\msvc2022_64\include\QtCore\qregularexpression.h \
+		C:\Qt\6.9.1\msvc2022_64\include\QtCore\quuid.h \
+		C:\Qt\6.9.1\msvc2022_64\include\QtCore\qjsondocument.h \
+		C:\Qt\6.9.1\msvc2022_64\include\QtCore\qjsonparseerror.h \
 		C:\Qt\6.9.1\msvc2022_64\include\QtWidgets\QDialog \
-		C:\Qt\6.9.1\msvc2022_64\include\QtWidgets\qdialog.h
+		C:\Qt\6.9.1\msvc2022_64\include\QtWidgets\qdialog.h \
+		C:\Qt\6.9.1\msvc2022_64\include\QtWidgets\QMessageBox \
+		C:\Qt\6.9.1\msvc2022_64\include\QtWidgets\qmessagebox.h \
+		C:\Qt\6.9.1\msvc2022_64\include\QtWidgets\qdialogbuttonbox.h
 
 debug\main.obj: ..\..\main.cpp ..\..\login.h \
 		C:\Qt\6.9.1\msvc2022_64\include\QtWidgets\QWidget \
@@ -4105,7 +4138,7 @@ debug\main.obj: ..\..\main.cpp ..\..\login.h \
 		..\..\membermanager.h \
 		C:\Qt\6.9.1\msvc2022_64\include\QtCore\QString \
 		C:\Qt\6.9.1\msvc2022_64\include\QtCore\QMap \
-		..\..\Member.h
+		..\..\member.h
 
 debug\member.obj: ..\..\member.cpp ..\..\member.h \
 		C:\Qt\6.9.1\msvc2022_64\include\QtCore\QString \
@@ -4363,7 +4396,7 @@ debug\membermanager.obj: ..\..\membermanager.cpp ..\..\membermanager.h \
 		C:\Qt\6.9.1\msvc2022_64\include\QtCore\qmap.h \
 		C:\Qt\6.9.1\msvc2022_64\include\QtCore\qshareddata.h \
 		C:\Qt\6.9.1\msvc2022_64\include\QtCore\qshareddata_impl.h \
-		..\..\Member.h \
+		..\..\member.h \
 		C:\Qt\6.9.1\msvc2022_64\include\QtCore\QJsonObject \
 		C:\Qt\6.9.1\msvc2022_64\include\QtCore\qjsonobject.h \
 		C:\Qt\6.9.1\msvc2022_64\include\QtCore\qjsonvalue.h \
@@ -5208,7 +5241,7 @@ debug\signup.obj: ..\..\signup.cpp ..\..\signup.h \
 		..\..\membermanager.h \
 		C:\Qt\6.9.1\msvc2022_64\include\QtCore\QString \
 		C:\Qt\6.9.1\msvc2022_64\include\QtCore\QMap \
-		..\..\Member.h \
+		..\..\member.h \
 		C:\Qt\6.9.1\msvc2022_64\include\QtCore\QJsonObject \
 		C:\Qt\6.9.1\msvc2022_64\include\QtCore\qjsonobject.h \
 		C:\Qt\6.9.1\msvc2022_64\include\QtCore\qjsonvalue.h \
@@ -5220,7 +5253,6 @@ debug\signup.obj: ..\..\signup.cpp ..\..\signup.h \
 		C:\Qt\6.9.1\msvc2022_64\include\QtCore\quuid.h \
 		C:\Qt\6.9.1\msvc2022_64\include\QtCore\qjsondocument.h \
 		C:\Qt\6.9.1\msvc2022_64\include\QtCore\qjsonparseerror.h \
-		..\..\member.h \
 		..\..\jsonmanager.h \
 		C:\Qt\6.9.1\msvc2022_64\include\QtCore\QJsonArray \
 		C:\Qt\6.9.1\msvc2022_64\include\QtCore\qjsonarray.h \

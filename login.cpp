@@ -3,7 +3,10 @@
 #include "normal.h"
 #include "admin.h"
 #include "signup.h"
+#include "membermanager.h"
+#include <QString>
 #include <QDialog>
+#include <QMessageBox>
 
 LogIn::LogIn(QWidget *parent)
     : QWidget(parent)
@@ -23,31 +26,40 @@ void LogIn::on_cancelButton_clicked() {
 }
 
 void LogIn::on_logInButton_clicked() {
-    /* 분기 내용 */
+    // 분기 내용
+    bool logged_in = false;
+    MemberManager& memberManager = MemberManager::getInstance();
     QString userid = ui->idEdit->text();
     QString userpw = ui->pwEdit->text();
-    // Member List 검색하여
-    // ID 및 PW 매칭
-    qDebug() << tr("사용자 아이디: ") << userid;
-    qDebug() << tr("사용자 비밀번호: ") << userpw;
-    // if( 관리자 )
-    if (userid == "admin") {
-        Admin *admin = new Admin;
-        admin->show();
-        this->close();
+
+    QMap<QString, Member*> temp;
+    temp = memberManager.getMemberMap();
+    for (auto it = temp.constBegin(); it!=temp.constEnd(); ++it) {
+        if (it.key() == userid && it.value()->getMemberPW() == userpw) {
+            if (it.value()->isManager()==true){
+                QMap<QString, Member*> loginMember;
+                loginMember.insert(it.key(), it.value());
+                memberManager.setLoggedInMember(loginMember);
+                logged_in = true;
+                Admin *admin = new Admin;
+                admin->show();
+                this->close();
+            } else {
+                QMap<QString, Member*> loginMember;
+                loginMember.insert(it.key(), it.value());
+                memberManager.setLoggedInMember(loginMember);
+                logged_in = true;
+                Normal *normal = new Normal;
+                normal->show();
+                this->close();
+            }
+        }
     }
 
-    // else if ( 일반회원 )
-    else if (userid == "normal") {
-        Normal *normal = new Normal;
-        normal->show();
-        this->close();
+    // 잘못된 회원 정보
+    if (!logged_in){
+        QMessageBox::critical(this, tr("Wrong ID or PW"), tr("Check your ID or PW"), QMessageBox::Ok);
     }
-
-    // else // 잘못된 회원 정보
-    /*
-     * QMessageBox::critical(this, tr("잘못된 회원 정보"), tr("ID 또는 비밀번호를 확인하십시오."), QMessageBox::Ok);
-     */
 }
 
 void LogIn::on_signUpButton_clicked() {

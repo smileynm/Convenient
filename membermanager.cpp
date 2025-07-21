@@ -24,12 +24,11 @@ MemberManager::~MemberManager() {
 
 bool MemberManager::registerMember(Member* member, const QString& id) {
     if (membersByID.count(id)) {
-        qDebug() << QObject::tr("에러: 이미 있는 회원 ID");
+        qDebug() << QObject::tr("Error: Already exist ID");
         return false;
     }
-
     membersByID[id] = member;
-    qDebug() << QObject::tr("회원가입 완료: %1 %2").arg(member->getMemberName()).arg(id);
+    qDebug() << QObject::tr("Member registered: %1 %2").arg(member->getMemberName()).arg(id);
     return true;
 }
 
@@ -38,7 +37,6 @@ Member* MemberManager::findMemberByID(const QString& memberID) {
     if (it != membersByID.end()) {
         return it.value();
     }
-
     return nullptr;
 }
 
@@ -61,4 +59,13 @@ bool MemberManager::removeMember(const QString& memberID) {
 
 const QMap<QString, Member*>& MemberManager::getMemberMap() const {
     return membersByID;
+}
+
+const QMap<QString, Member*>& MemberManager::getLoggedinMember() const {
+    return loggedInMember;
+}
+
+QMap<QString, Member*>& MemberManager::setLoggedInMember(QMap<QString, Member*> loginMember) {
+    loggedInMember = loginMember;
+    return loggedInMember;
 }

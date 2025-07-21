@@ -26,8 +26,12 @@ bool JsonManager::loadMemberFromJson(MemberManager& memberManager, const QString
             QString id = memberObj["id"].toString();
             QString password = memberObj["password"].toString();
             QString name = memberObj["name"].toString();
-
             Member* member = new Member(id, name, password);
+
+            // 관리자 계정일 경우, 관리자 flag 설정
+            if (memberObj["isManager"]==true) {
+                member->setManager(true);
+            }
             memberManager.registerMember(member, id);
 
             // 확인을 위한 qDebug Line

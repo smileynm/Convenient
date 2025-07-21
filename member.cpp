@@ -2,10 +2,6 @@
 
 Member::Member(QString memberID, QString memberName, QString memberPW) :
     m_memberID(memberID), m_memberName(memberName), m_memberPW(memberPW) {
-    if (memberID == "admin")
-        this->managerFlag = true;
-    else
-        this->managerFlag = false;
 }
 
 Member::~Member() {
@@ -17,6 +13,10 @@ QString Member::getMemberID() {
 
 QString Member::getMemberName() {
     return m_memberName;
+}
+
+QString Member::getMemberPW() {
+    return m_memberPW;
 }
 
 bool Member::isManager() {
@@ -31,4 +31,8 @@ QJsonObject Member::toJson() const {
     obj["isManager"] = managerFlag;
 
     return obj;
+}
+
+void Member::setManager(bool m_Flag) {
+    managerFlag = m_Flag;
 }

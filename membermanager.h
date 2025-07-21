@@ -4,7 +4,7 @@
 #include <QString>
 #include <QObject>
 #include <QMap>
-#include "Member.h"
+#include "member.h"
 
 class MemberManager :public QObject {
     Q_OBJECT
@@ -15,6 +15,8 @@ public:
     Member* findMemberByID(const QString& memberID);
     bool removeMember(const QString& memberID);
     const QMap<QString, Member*>& getMemberMap() const;
+    const QMap<QString, Member*>& getLoggedinMember() const;
+    QMap<QString, Member*>& setLoggedInMember(QMap<QString, Member*> loginMember);
 
 private:
     // 싱글턴 구현을 위한 생성자/소멸자의 private 접근제한
@@ -26,6 +28,7 @@ private:
     MemberManager& operator=(const MemberManager&) = delete;
 
     QMap<QString, Member*> membersByID;
+    QMap<QString, Member*> loggedInMember;
 };
 
 #endif // MEMBERMANAGER_H
