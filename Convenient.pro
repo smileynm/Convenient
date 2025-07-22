@@ -22,6 +22,8 @@ SOURCES += \
     normal.cpp \
     normalchatform.cpp \
     normalorderform.cpp \
+    product.cpp \
+    productmanager.cpp \
     signup.cpp
 
 HEADERS += \
@@ -37,6 +39,8 @@ HEADERS += \
     normal.h \
     normalchatform.h \
     normalorderform.h \
+    product.h \
+    productmanager.h \
     signup.h
 
 FORMS += \

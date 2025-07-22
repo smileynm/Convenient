@@ -70,5 +70,17 @@
         "isManager": false,
         "name": "김민성",
         "password": "0000"
+    },
+    {
+        "id": "helloworld",
+        "isManager": false,
+        "name": "홍길동",
+        "password": "0000"
+    },
+    {
+        "id": "123",
+        "isManager": false,
+        "name": "123",
+        "password": "123"
     }
 ]
