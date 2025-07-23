@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>4</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="page_0">
     <widget class="QTableWidget" name="beverageWidget">
@@ -128,7 +128,7 @@
       <x>0</x>
       <y>0</y>
       <width>170</width>
-      <height>208</height>
+      <height>250</height>
      </rect>
     </property>
     <attribute name="label">
@@ -141,7 +141,7 @@
       <x>0</x>
       <y>0</y>
       <width>170</width>
-      <height>208</height>
+      <height>250</height>
      </rect>
     </property>
     <attribute name="label">
@@ -154,7 +154,7 @@
       <x>0</x>
       <y>0</y>
       <width>170</width>
-      <height>208</height>
+      <height>250</height>
      </rect>
     </property>
     <attribute name="label">
@@ -167,7 +167,7 @@
       <x>0</x>
       <y>0</y>
       <width>170</width>
-      <height>208</height>
+      <height>250</height>
      </rect>
     </property>
     <attribute name="label">
@@ -180,7 +180,7 @@
       <x>0</x>
       <y>0</y>
       <width>170</width>
-      <height>208</height>
+      <height>250</height>
      </rect>
     </property>
     <attribute name="label">
@@ -193,7 +193,7 @@
       <x>0</x>
       <y>0</y>
       <width>170</width>
-      <height>208</height>
+      <height>250</height>
      </rect>
     </property>
     <attribute name="label">
@@ -206,7 +206,7 @@
       <x>0</x>
       <y>0</y>
       <width>170</width>
-      <height>208</height>
+      <height>250</height>
      </rect>
     </property>
     <attribute name="label">

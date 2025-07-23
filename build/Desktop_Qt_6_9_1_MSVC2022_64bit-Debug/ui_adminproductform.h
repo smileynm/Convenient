@@ -102,36 +102,36 @@ public:
         toolBox->setGeometry(QRect(620, 10, 170, 460));
         beveraageTool = new QWidget();
         beveraageTool->setObjectName("beveraageTool");
-        beveraageTool->setGeometry(QRect(0, 0, 170, 208));
+        beveraageTool->setGeometry(QRect(0, 0, 170, 250));
         toolBox->addItem(beveraageTool, QString::fromUtf8("\354\235\214\353\243\214"));
         snackTool = new QWidget();
         snackTool->setObjectName("snackTool");
-        snackTool->setGeometry(QRect(0, 0, 170, 208));
+        snackTool->setGeometry(QRect(0, 0, 170, 250));
         toolBox->addItem(snackTool, QString::fromUtf8("\354\212\244\353\202\265"));
         instantTool = new QWidget();
         instantTool->setObjectName("instantTool");
-        instantTool->setGeometry(QRect(0, 0, 170, 208));
+        instantTool->setGeometry(QRect(0, 0, 170, 250));
         toolBox->addItem(instantTool, QString::fromUtf8("\354\246\211\354\204\235\354\213\235\355\222\210"));
         mikiceTool = new QWidget();
         mikiceTool->setObjectName("mikiceTool");
-        mikiceTool->setGeometry(QRect(0, 0, 170, 208));
+        mikiceTool->setGeometry(QRect(0, 0, 170, 250));
         toolBox->addItem(mikiceTool, QString::fromUtf8("\354\234\240\354\240\234\355\222\210/\354\225\204\354\235\264\354\212\244\355\201\254\353\246\274"));
         drinkTool = new QWidget();
         drinkTool->setObjectName("drinkTool");
-        drinkTool->setGeometry(QRect(0, 0, 170, 208));
+        drinkTool->setGeometry(QRect(0, 0, 170, 250));
         toolBox->addItem(drinkTool, QString::fromUtf8("\354\243\274\353\245\230"));
         neceTool = new QWidget();
         neceTool->setObjectName("neceTool");
-        neceTool->setGeometry(QRect(0, 0, 170, 208));
+        neceTool->setGeometry(QRect(0, 0, 170, 250));
         toolBox->addItem(neceTool, QString::fromUtf8("\354\203\235\355\231\234\354\232\251\355\222\210"));
         allTool = new QWidget();
         allTool->setObjectName("allTool");
-        allTool->setGeometry(QRect(0, 0, 170, 208));
+        allTool->setGeometry(QRect(0, 0, 170, 250));
         toolBox->addItem(allTool, QString::fromUtf8("\354\240\204\354\262\264"));
 
         retranslateUi(AdminProductForm);
 
-        stackedWidget->setCurrentIndex(4);
+        stackedWidget->setCurrentIndex(0);
         toolBox->setCurrentIndex(6);
 
 

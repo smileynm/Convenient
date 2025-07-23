@@ -15,6 +15,11 @@ LogIn::LogIn(QWidget *parent)
 
     // 제목표시줄 설정 : Login
     setWindowTitle(tr("QT25 LogIn"));
+
+
+
+
+
 }
 
 LogIn::~LogIn() {

@@ -1,6 +1,6 @@
 #include "product.h"
 
-Product::Product(QString productName, QString productID, QString productPrice, QString productCategory) :
+Product::Product(QString productName, QString productID, int productPrice, QString productCategory) :
     m_productName(productName), m_productID(productID), m_productPrice(productPrice), m_productCategory(productCategory) {
 }
 
@@ -15,7 +15,7 @@ QString Product::getProductID() {
     return m_productID;
 }
 
-QString Product::getProductPrice() {
+int Product::getProductPrice() {
     return m_productPrice;
 }
 

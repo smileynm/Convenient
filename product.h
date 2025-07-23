@@ -6,17 +6,17 @@
 
 class Product {
 public:
-    Product(QString productName, QString productID, QString productPrice, QString productCategory);
+    Product(QString productName, QString productID, int productPrice, QString productCategory);
     ~Product();
     QString getProductName();
     QString getProductID();
-    QString getProductPrice();
+    int getProductPrice();
     QString getProductCategory();
 
 private:
     QString m_productName;
     QString m_productID;
-    QString m_productPrice;
+    int m_productPrice;
     QString m_productCategory;
 };
 

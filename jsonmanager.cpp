@@ -35,7 +35,44 @@ bool JsonManager::loadMemberFromJson(MemberManager& memberManager, const QString
             memberManager.registerMember(member, id);
 
             // 확인을 위한 qDebug Line
-            qDebug() << member->getMemberID() << "registered.";
+            //qDebug() << member->getMemberID() << "registered.";
+        }
+        return true;
+    } else {
+        qDebug() << "Cannot open File:" << filePath;
+        return false;
+    }
+}
+
+bool JsonManager::loadProductFromJson(ProductManager& productManager, const QString& filePath) {
+    QFile file("productCatalog.json");
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QByteArray jsonData = file.readAll();
+        file.close();
+
+        // 읽은 데이터로 Json 파싱
+        QJsonDocument doc = QJsonDocument::fromJson(jsonData);
+        if (doc.isNull() || !doc.isArray()) {
+            qDebug() << "유효하지 않은 Json 파일이 로드됨";
+            return false;
+        }
+
+        // JsonArray에 Obj 형태로 저장
+        QJsonArray productsArray = doc.array();
+        for (auto it = productsArray.begin(); it != productsArray.end(); ++it) {
+            if (!it->isObject())
+                continue;
+            QJsonObject productObj = it->toObject();
+            QString name = productObj["productName"].toString();
+            QString productId = productObj["productId"].toString();
+            int price = productObj["price"].toInt();
+            QString category = productObj["category"].toString();
+            Product* product = new Product(name, productId, price, category);
+
+            productManager.registerProduct(product, name);
+
+            // 확인을 위한 qDebug Line
+            //qDebug() << product->getProductName() << "registered.";
         }
         return true;
     } else {

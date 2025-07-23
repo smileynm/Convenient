@@ -5,6 +5,7 @@
 #include <QTranslator>
 #include "jsonmanager.h"
 #include "membermanager.h"
+#include "productmanager.h"
 
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
@@ -23,7 +24,10 @@ int main(int argc, char *argv[]) {
     /****************************************************/
     JsonManager *jsonManager = new JsonManager;
     MemberManager& memberManager = MemberManager::getInstance();
+    ProductManager& productManager = ProductManager::getInstance();
+
     jsonManager->loadMemberFromJson(memberManager, "members.json");
+    jsonManager->loadProductFromJson(productManager, "productCatalog.json");
     /****************************************************/
     LogIn *login = new LogIn;
     login->show();
