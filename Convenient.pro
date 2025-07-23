@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -14,6 +14,8 @@ SOURCES += \
     admininfoform.cpp \
     adminorderlistform.cpp \
     adminproductform.cpp \
+    chatclient.cpp \
+    chatserver.cpp \
     jsonmanager.cpp \
     login.cpp \
     main.cpp \
@@ -32,6 +34,8 @@ HEADERS += \
     admininfoform.h \
     adminorderlistform.h \
     adminproductform.h \
+    chatclient.h \
+    chatserver.h \
     jsonmanager.h \
     login.h \
     member.h \

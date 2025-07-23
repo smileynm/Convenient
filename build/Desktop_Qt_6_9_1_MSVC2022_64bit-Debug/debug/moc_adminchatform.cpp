@@ -41,7 +41,11 @@ template <> constexpr inline auto AdminChatForm::qt_create_metaobjectdata<qt_met
         "AdminChatForm",
         "on_toolBox_currentChanged",
         "",
-        "index"
+        "index",
+        "on_sendButton_clicked",
+        "onConnected",
+        "onDisconnected",
+        "onReadyRead"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -49,6 +53,14 @@ template <> constexpr inline auto AdminChatForm::qt_create_metaobjectdata<qt_met
         QtMocHelpers::SlotData<void(int)>(1, 2, QMC::AccessPrivate, QMetaType::Void, {{
             { QMetaType::Int, 3 },
         }}),
+        // Slot 'on_sendButton_clicked'
+        QtMocHelpers::SlotData<void()>(4, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'onConnected'
+        QtMocHelpers::SlotData<void()>(5, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'onDisconnected'
+        QtMocHelpers::SlotData<void()>(6, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'onReadyRead'
+        QtMocHelpers::SlotData<void()>(7, 2, QMC::AccessPrivate, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -73,6 +85,10 @@ void AdminChatForm::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: _t->on_toolBox_currentChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 1: _t->on_sendButton_clicked(); break;
+        case 2: _t->onConnected(); break;
+        case 3: _t->onDisconnected(); break;
+        case 4: _t->onReadyRead(); break;
         default: ;
         }
     }
@@ -97,14 +113,14 @@ int AdminChatForm::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 5;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
+        if (_id < 5)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 1;
+        _id -= 5;
     }
     return _id;
 }
