@@ -67,7 +67,7 @@ void NormalChatForm::on_sendButton_clicked() {
         socket->write(fullMessage.toUtf8() + "\n");
 
         // 자신의 메시지도 채팅창에 표시
-        ui->mainChatEdit->append(fullMessage);
+        //ui->mainChatEdit->append(fullMessage);
 
         // 입력창 초기화
         ui->chatEdit->clear();

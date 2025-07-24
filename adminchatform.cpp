@@ -1,6 +1,7 @@
 #include "adminchatform.h"
 #include "ui_adminchatform.h"
 #include "chatserver.h"
+#include "membermanager.h"
 #include <QMessageBox>
 #include <QScrollBar>
 #include <QKeyEvent>
@@ -39,13 +40,15 @@ void AdminChatForm::on_toolBox_currentChanged(int index) {
 
 void AdminChatForm::on_sendButton_clicked() {
     QString message = ui->chatEdit->toPlainText().trimmed();
+    MemberManager& memberManager = MemberManager::getInstance();
+    message = memberManager.getLoggedinMember().firstKey() + " : " + message;
     if (message.isEmpty()) {
         return;
     }
     if (socket->state() == QAbstractSocket::ConnectedState) {
         socket->write(message.toUtf8() + "\n");
         ui->chatEdit->clear();
-        ui->mainChatEdit->append(message);
+        //ui->mainChatEdit->append(message);
     } else {
         QMessageBox::warning(this, tr("오류"), tr("서버에 연결되어 있지 않습니다."));
     }

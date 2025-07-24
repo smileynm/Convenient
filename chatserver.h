@@ -19,7 +19,7 @@ public:
 
 signals:
     void clientDisconnected(ClientHandler* handler);
-    void messageReceived(const QString& sender, const QString& message);
+    void messageReceived(const QString& message);
 
 private:
     QTcpSocket* clientSocket;
@@ -34,7 +34,7 @@ public:
     bool startServer(quint16 port);
     void stopServer();
 
-    void broadcastMessage(const QString& sender, const QString& message);
+    void broadcastMessage(const QString& message);
     void logMessage(const QString& log);
 
 protected:

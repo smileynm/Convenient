@@ -42,9 +42,8 @@ template <> constexpr inline auto ClientHandler::qt_create_metaobjectdata<qt_met
         "clientDisconnected",
         "",
         "ClientHandler*",
-        "handler",
+        "connectedClientObject",
         "messageReceived",
-        "sender",
         "message"
     };
 
@@ -54,8 +53,8 @@ template <> constexpr inline auto ClientHandler::qt_create_metaobjectdata<qt_met
             { 0x80000000 | 3, 4 },
         }}),
         // Signal 'messageReceived'
-        QtMocHelpers::SignalData<void(const QString &, const QString &)>(5, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::QString, 6 }, { QMetaType::QString, 7 },
+        QtMocHelpers::SignalData<void(const QString &)>(5, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 6 },
         }}),
     };
     QtMocHelpers::UintData qt_properties {
@@ -81,7 +80,7 @@ void ClientHandler::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: _t->clientDisconnected((*reinterpret_cast< std::add_pointer_t<ClientHandler*>>(_a[1]))); break;
-        case 1: _t->messageReceived((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
+        case 1: _t->messageReceived((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         default: ;
         }
     }
@@ -100,7 +99,7 @@ void ClientHandler::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
     if (_c == QMetaObject::IndexOfMethod) {
         if (QtMocHelpers::indexOfMethod<void (ClientHandler::*)(ClientHandler * )>(_a, &ClientHandler::clientDisconnected, 0))
             return;
-        if (QtMocHelpers::indexOfMethod<void (ClientHandler::*)(const QString & , const QString & )>(_a, &ClientHandler::messageReceived, 1))
+        if (QtMocHelpers::indexOfMethod<void (ClientHandler::*)(const QString & )>(_a, &ClientHandler::messageReceived, 1))
             return;
     }
 }
@@ -143,9 +142,9 @@ void ClientHandler::clientDisconnected(ClientHandler * _t1)
 }
 
 // SIGNAL 1
-void ClientHandler::messageReceived(const QString & _t1, const QString & _t2)
+void ClientHandler::messageReceived(const QString & _t1)
 {
-    QMetaObject::activate<void>(this, &staticMetaObject, 1, nullptr, _t1, _t2);
+    QMetaObject::activate<void>(this, &staticMetaObject, 1, nullptr, _t1);
 }
 namespace {
 struct qt_meta_tag_ZN10ChatServerE_t {};

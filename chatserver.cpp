@@ -12,7 +12,7 @@ void ClientHandler::run() {
         while (clientSocket->canReadLine()) {
             QByteArray line = clientSocket->readLine().trimmed();
             QString message = QString::fromUtf8(line);
-            emit messageReceived(clientID, message);
+            emit messageReceived(message);
         }
     });
 
@@ -79,13 +79,12 @@ void ChatServer::incomingConnection(qintptr socketDescriptor) {
     ClientHandler* handler = new ClientHandler(socket);
     clients[handler] = handler->getClientID();
 
-    connect(handler, &ClientHandler::messageReceived, this, [this](const QString& sender, const QString& message) {
+    connect(handler, &ClientHandler::messageReceived, this, [this](const QString& message) {
         QString logEntry = QString("[%1] %2: %3")
         .arg(QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss"))
-            .arg(sender)
             .arg(message);
         logMessage(logEntry);
-        broadcastMessage(sender, message);
+        broadcastMessage(message);
     });
 
     connect(handler, &ClientHandler::finished, this, [this, handler]() {
@@ -96,15 +95,14 @@ void ChatServer::incomingConnection(qintptr socketDescriptor) {
     handler->start();
 }
 
-void ChatServer::broadcastMessage(const QString& sender, const QString& message) {
+void ChatServer::broadcastMessage(const QString& message) {
     for (auto handler : clients.keys()) {
-        if (handler->getClientID() != sender) {
-            QTcpSocket* socket = handler->getSocket();
-            if (socket && socket->isOpen()) {
-                socket->write(QString("%1: %2\n").arg(sender).arg(message).toUtf8());
-                socket->flush();
-            }
+        QTcpSocket* socket = handler->getSocket();
+        if (socket && socket->isOpen()) {
+            socket->write(QString("%1\n").arg(message).toUtf8());
+            socket->flush();
         }
+
     }
 }
 
