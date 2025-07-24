@@ -3,6 +3,7 @@
 #include "chatserver.h"
 #include <QMessageBox>
 #include <QScrollBar>
+#include <QKeyEvent>
 
 AdminChatForm::AdminChatForm(QWidget *parent)
     : QWidget(parent)
@@ -44,6 +45,7 @@ void AdminChatForm::on_sendButton_clicked() {
     if (socket->state() == QAbstractSocket::ConnectedState) {
         socket->write(message.toUtf8() + "\n");
         ui->chatEdit->clear();
+        ui->mainChatEdit->append(message);
     } else {
         QMessageBox::warning(this, tr("오류"), tr("서버에 연결되어 있지 않습니다."));
     }
