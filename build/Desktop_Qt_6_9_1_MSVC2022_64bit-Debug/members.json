@@ -88,5 +88,11 @@
         "isManager": false,
         "name": "a",
         "password": "a"
+    },
+    {
+        "id": "b",
+        "isManager": false,
+        "name": "b",
+        "password": "b"
     }
 ]

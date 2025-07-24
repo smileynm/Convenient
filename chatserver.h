@@ -15,6 +15,7 @@ public:
     explicit ClientHandler(QTcpSocket* socket, QObject* parent = nullptr);
     void run() override;
     QString getClientID();
+    QTcpSocket* getSocket() const;
 
 signals:
     void clientDisconnected(ClientHandler* handler);

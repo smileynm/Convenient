@@ -27,6 +27,9 @@ QString ClientHandler::getClientID() {
     return clientID;
 }
 
+QTcpSocket* ClientHandler::getSocket() const {
+    return clientSocket;
+}
 
 ChatServer& ChatServer::getInstance() {
     static ChatServer instance;
@@ -95,8 +98,8 @@ void ChatServer::incomingConnection(qintptr socketDescriptor) {
 
 void ChatServer::broadcastMessage(const QString& sender, const QString& message) {
     for (auto handler : clients.keys()) {
-        if (clients[handler] != sender) {
-            QTcpSocket* socket = handler->findChild<QTcpSocket*>();
+        if (handler->getClientID() != sender) {
+            QTcpSocket* socket = handler->getSocket();
             if (socket && socket->isOpen()) {
                 socket->write(QString("%1: %2\n").arg(sender).arg(message).toUtf8());
                 socket->flush();

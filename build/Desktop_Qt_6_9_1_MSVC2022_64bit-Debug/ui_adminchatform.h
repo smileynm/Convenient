@@ -55,11 +55,11 @@ public:
         toolBox->setGeometry(QRect(620, 10, 170, 460));
         annTool = new QWidget();
         annTool->setObjectName("annTool");
-        annTool->setGeometry(QRect(0, 0, 170, 388));
+        annTool->setGeometry(QRect(0, 0, 170, 400));
         toolBox->addItem(annTool, QString::fromUtf8("\352\263\265\354\247\200\354\202\254\355\225\255"));
         chatTool = new QWidget();
         chatTool->setObjectName("chatTool");
-        chatTool->setGeometry(QRect(0, 0, 170, 388));
+        chatTool->setGeometry(QRect(0, 0, 170, 400));
         joinButton = new QPushButton(chatTool);
         joinButton->setObjectName("joinButton");
         joinButton->setGeometry(QRect(10, 350, 70, 30));
