@@ -42,7 +42,7 @@ template <> constexpr inline auto ClientHandler::qt_create_metaobjectdata<qt_met
         "clientDisconnected",
         "",
         "ClientHandler*",
-        "connectedClientObject",
+        "handler",
         "messageReceived",
         "message"
     };
