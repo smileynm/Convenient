@@ -1,3 +1,5 @@
+// normalorderform.cpp
+
 #include "normalorderform.h"
 #include "ui_normalorderform.h"
 

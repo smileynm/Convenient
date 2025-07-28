@@ -1,3 +1,5 @@
+// adminchatform.h
+
 #ifndef ADMINCHATFORM_H
 #define ADMINCHATFORM_H
 
@@ -23,6 +25,8 @@ private slots:
     void onConnected();
     void onDisconnected();
     void onReadyRead();
+
+    void updateAttendanceList();
 
 private:
     Ui::AdminChatForm *ui;

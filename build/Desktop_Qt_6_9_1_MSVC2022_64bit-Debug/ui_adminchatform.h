@@ -15,7 +15,7 @@
 #include <QtWidgets/QLayout>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStackedWidget>
-#include <QtWidgets/QTableView>
+#include <QtWidgets/QTableWidget>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QToolBox>
 #include <QtWidgets/QWidget>
@@ -30,9 +30,7 @@ public:
     QToolBox *toolBox;
     QWidget *annTool;
     QWidget *chatTool;
-    QPushButton *joinButton;
-    QPushButton *exitButton;
-    QTableView *attendanceView;
+    QTableWidget *attendanceWidget;
     QStackedWidget *stackedWidget;
     QWidget *page_0;
     QTextEdit *annChatEdit;
@@ -60,15 +58,9 @@ public:
         chatTool = new QWidget();
         chatTool->setObjectName("chatTool");
         chatTool->setGeometry(QRect(0, 0, 170, 400));
-        joinButton = new QPushButton(chatTool);
-        joinButton->setObjectName("joinButton");
-        joinButton->setGeometry(QRect(10, 350, 70, 30));
-        exitButton = new QPushButton(chatTool);
-        exitButton->setObjectName("exitButton");
-        exitButton->setGeometry(QRect(90, 350, 70, 30));
-        attendanceView = new QTableView(chatTool);
-        attendanceView->setObjectName("attendanceView");
-        attendanceView->setGeometry(QRect(10, 10, 150, 320));
+        attendanceWidget = new QTableWidget(chatTool);
+        attendanceWidget->setObjectName("attendanceWidget");
+        attendanceWidget->setGeometry(QRect(10, 10, 150, 380));
         toolBox->addItem(chatTool, QString::fromUtf8("\354\261\204\355\214\205\353\260\251"));
         stackedWidget = new QStackedWidget(AdminChatForm);
         stackedWidget->setObjectName("stackedWidget");
@@ -102,8 +94,6 @@ public:
         AdminChatForm->setWindowTitle(QCoreApplication::translate("AdminChatForm", "Form", nullptr));
         sendButton->setText(QCoreApplication::translate("AdminChatForm", "Send", nullptr));
         toolBox->setItemText(toolBox->indexOf(annTool), QCoreApplication::translate("AdminChatForm", "\352\263\265\354\247\200\354\202\254\355\225\255", nullptr));
-        joinButton->setText(QCoreApplication::translate("AdminChatForm", "\354\236\205 \354\236\245", nullptr));
-        exitButton->setText(QCoreApplication::translate("AdminChatForm", "\355\207\264 \354\236\245", nullptr));
         toolBox->setItemText(toolBox->indexOf(chatTool), QCoreApplication::translate("AdminChatForm", "\354\261\204\355\214\205\353\260\251", nullptr));
 #if QT_CONFIG(tooltip)
         annChatEdit->setToolTip(QCoreApplication::translate("AdminChatForm", "<html><head/><body><p>ann_chat_edit</p></body></html>", nullptr));

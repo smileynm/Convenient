@@ -1,3 +1,5 @@
+// admininfoform.h
+
 #ifndef ADMININFOFORM_H
 #define ADMININFOFORM_H
 

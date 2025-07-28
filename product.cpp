@@ -1,3 +1,5 @@
+// product.cpp
+
 #include "product.h"
 
 Product::Product(QString productName, QString productID, int productPrice, QString productCategory) :

@@ -1,3 +1,5 @@
+// jsonmanager.cpp
+
 #include "jsonmanager.h"
 
 JsonManager::JsonManager() {

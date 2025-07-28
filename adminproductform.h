@@ -1,3 +1,5 @@
+// adminproductform.h
+
 #ifndef ADMINPRODUCTFORM_H
 #define ADMINPRODUCTFORM_H
 

@@ -1,3 +1,5 @@
+// productmanager.h
+
 #ifndef PRODUCTMANAGER_H
 #define PRODUCTMANAGER_H
 

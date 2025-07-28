@@ -1,3 +1,5 @@
+// chatclient.h
+
 #ifndef CHATCLIENT_H
 #define CHATCLIENT_H
 

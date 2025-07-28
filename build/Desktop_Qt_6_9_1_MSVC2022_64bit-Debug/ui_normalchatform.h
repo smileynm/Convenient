@@ -15,7 +15,7 @@
 #include <QtWidgets/QLayout>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStackedWidget>
-#include <QtWidgets/QTableView>
+#include <QtWidgets/QTableWidget>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QToolBox>
 #include <QtWidgets/QWidget>
@@ -28,9 +28,7 @@ public:
     QToolBox *toolBox;
     QWidget *annTool;
     QWidget *chatTool;
-    QTableView *attendanceView;
-    QPushButton *exitButton;
-    QPushButton *joinButton;
+    QTableWidget *attendanceWidget;
     QTextEdit *chatEdit;
     QPushButton *sendButton;
     QStackedWidget *stackedWidget;
@@ -49,20 +47,14 @@ public:
         toolBox->setGeometry(QRect(620, 10, 170, 460));
         annTool = new QWidget();
         annTool->setObjectName("annTool");
-        annTool->setGeometry(QRect(0, 0, 170, 388));
+        annTool->setGeometry(QRect(0, 0, 170, 400));
         toolBox->addItem(annTool, QString::fromUtf8("\352\263\265\354\247\200\354\202\254\355\225\255"));
         chatTool = new QWidget();
         chatTool->setObjectName("chatTool");
-        chatTool->setGeometry(QRect(0, 0, 170, 388));
-        attendanceView = new QTableView(chatTool);
-        attendanceView->setObjectName("attendanceView");
-        attendanceView->setGeometry(QRect(10, 10, 150, 320));
-        exitButton = new QPushButton(chatTool);
-        exitButton->setObjectName("exitButton");
-        exitButton->setGeometry(QRect(90, 350, 70, 30));
-        joinButton = new QPushButton(chatTool);
-        joinButton->setObjectName("joinButton");
-        joinButton->setGeometry(QRect(10, 350, 70, 30));
+        chatTool->setGeometry(QRect(0, 0, 170, 400));
+        attendanceWidget = new QTableWidget(chatTool);
+        attendanceWidget->setObjectName("attendanceWidget");
+        attendanceWidget->setGeometry(QRect(10, 10, 150, 380));
         toolBox->addItem(chatTool, QString::fromUtf8("\354\261\204\355\214\205\353\260\251"));
         chatEdit = new QTextEdit(NormalChatForm);
         chatEdit->setObjectName("chatEdit");
@@ -100,8 +92,6 @@ public:
     {
         NormalChatForm->setWindowTitle(QCoreApplication::translate("NormalChatForm", "Form", nullptr));
         toolBox->setItemText(toolBox->indexOf(annTool), QCoreApplication::translate("NormalChatForm", "\352\263\265\354\247\200\354\202\254\355\225\255", nullptr));
-        exitButton->setText(QCoreApplication::translate("NormalChatForm", "\355\207\264 \354\236\245", nullptr));
-        joinButton->setText(QCoreApplication::translate("NormalChatForm", "\354\236\205 \354\236\245", nullptr));
         toolBox->setItemText(toolBox->indexOf(chatTool), QCoreApplication::translate("NormalChatForm", "\354\261\204\355\214\205\353\260\251", nullptr));
         sendButton->setText(QCoreApplication::translate("NormalChatForm", "Send", nullptr));
     } // retranslateUi

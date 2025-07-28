@@ -1,3 +1,5 @@
+// normalchatform.h
+
 #ifndef NORMALCHATFORM_H
 #define NORMALCHATFORM_H
 
@@ -23,6 +25,8 @@ private slots:
     void onConnected();
     void onDisconnected();
     void onReadyRead();
+
+    void updateAttendanceList();
 
 private:
     Ui::NormalChatForm *ui;

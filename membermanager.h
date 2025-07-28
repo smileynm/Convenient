@@ -1,3 +1,5 @@
+// membermanager.h
+
 #ifndef MEMBERMANAGER_H
 #define MEMBERMANAGER_H
 

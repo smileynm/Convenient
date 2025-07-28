@@ -1,3 +1,5 @@
+// chatserver.h
+
 #ifndef CHATSERVER_H
 #define CHATSERVER_H
 
@@ -8,6 +10,7 @@
 #include <QFile>
 #include <QTextStream>
 #include <QMutex>
+#include <QList>
 
 class ClientHandler : public QThread {
     Q_OBJECT
@@ -37,6 +40,11 @@ public:
     void broadcastMessage(const QString& message);
     void logMessage(const QString& log);
 
+    QStringList getConnectedClientNames() const;
+
+signals:
+    void clientListUpdated();
+
 protected:
     void incomingConnection(qintptr socketDescriptor) override;
 
@@ -45,6 +53,9 @@ private:
     ~ChatServer();
 
     QMap<ClientHandler*, QString> clients;
+
+    // 소켓과 사용자명 매핑
+    QMap<QTcpSocket*, QString> m_connectedClientNames;
     QFile logFile;
     QMutex logMutex;
 

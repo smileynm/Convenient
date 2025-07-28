@@ -1,3 +1,5 @@
+// productmanager.cpp
+
 #include "productmanager.h"
 
 ProductManager& ProductManager::getInstance() {

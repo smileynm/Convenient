@@ -1,3 +1,5 @@
+// jsonmanager.h
+
 #ifndef JSONMANAGER_H
 #define JSONMANAGER_H
 #include <QJsonArray>

@@ -31,7 +31,7 @@
       <x>0</x>
       <y>0</y>
       <width>170</width>
-      <height>388</height>
+      <height>400</height>
      </rect>
     </property>
     <attribute name="label">
@@ -44,46 +44,20 @@
       <x>0</x>
       <y>0</y>
       <width>170</width>
-      <height>388</height>
+      <height>400</height>
      </rect>
     </property>
     <attribute name="label">
      <string>채팅방</string>
     </attribute>
-    <widget class="QTableView" name="attendanceView">
+    <widget class="QTableWidget" name="attendanceWidget">
      <property name="geometry">
       <rect>
        <x>10</x>
        <y>10</y>
        <width>150</width>
-       <height>320</height>
+       <height>380</height>
       </rect>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="exitButton">
-     <property name="geometry">
-      <rect>
-       <x>90</x>
-       <y>350</y>
-       <width>70</width>
-       <height>30</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>퇴 장</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="joinButton">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>350</y>
-       <width>70</width>
-       <height>30</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>입 장</string>
      </property>
     </widget>
    </widget>

@@ -1,3 +1,5 @@
+// member.cpp
+
 #include "member.h"
 
 Member::Member(QString memberID, QString memberName, QString memberPW) :

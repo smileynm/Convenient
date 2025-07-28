@@ -154,10 +154,14 @@ template <> constexpr inline auto ChatServer::qt_create_metaobjectdata<qt_meta_t
 {
     namespace QMC = QtMocConstants;
     QtMocHelpers::StringRefStorage qt_stringData {
-        "ChatServer"
+        "ChatServer",
+        "clientListUpdated",
+        ""
     };
 
     QtMocHelpers::UintData qt_methods {
+        // Signal 'clientListUpdated'
+        QtMocHelpers::SignalData<void()>(1, 2, QMC::AccessPublic, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -179,10 +183,16 @@ Q_CONSTINIT const QMetaObject ChatServer::staticMetaObject = { {
 void ChatServer::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     auto *_t = static_cast<ChatServer *>(_o);
-    (void)_t;
-    (void)_c;
-    (void)_id;
-    (void)_a;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        switch (_id) {
+        case 0: _t->clientListUpdated(); break;
+        default: ;
+        }
+    }
+    if (_c == QMetaObject::IndexOfMethod) {
+        if (QtMocHelpers::indexOfMethod<void (ChatServer::*)()>(_a, &ChatServer::clientListUpdated, 0))
+            return;
+    }
 }
 
 const QMetaObject *ChatServer::metaObject() const
@@ -201,6 +211,24 @@ void *ChatServer::qt_metacast(const char *_clname)
 int ChatServer::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QTcpServer::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 1)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 1;
+    }
+    if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        if (_id < 1)
+            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
+        _id -= 1;
+    }
     return _id;
+}
+
+// SIGNAL 0
+void ChatServer::clientListUpdated()
+{
+    QMetaObject::activate(this, &staticMetaObject, 0, nullptr);
 }
 QT_WARNING_POP

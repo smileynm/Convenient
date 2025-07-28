@@ -1,3 +1,5 @@
+// membermanager.cpp
+
 #include "membermanager.h"
 #include <QDebug>
 #include <QObject>

@@ -1,3 +1,5 @@
+// admininfoform.cpp
+
 #include "admininfoform.h"
 #include "ui_admininfoform.h"
 #include "membermanager.h"

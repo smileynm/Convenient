@@ -1,6 +1,8 @@
 #include "adminproductform.h"
 #include "ui_adminproductform.h"
 #include "productmanager.h"
+// adminproductform.cpp
+
 #include <QMap>
 #include <QString>
 
