@@ -16,6 +16,9 @@ public:
     explicit NormalOrderForm(QWidget *parent = nullptr);
     ~NormalOrderForm();
 
+private slots:
+    void on_toolBox_currentChanged(int index);
+
 private:
     Ui::NormalOrderForm *ui;
 };

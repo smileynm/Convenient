@@ -69,6 +69,7 @@ bool JsonManager::loadProductFromJson(ProductManager& productManager, const QStr
             QString productId = productObj["productId"].toString();
             int price = productObj["price"].toInt();
             QString category = productObj["category"].toString();
+            //qDebug() << category;
             Product* product = new Product(name, productId, price, category);
 
             productManager.registerProduct(product, name);
