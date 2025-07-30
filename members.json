@@ -1,0 +1,98 @@
+[
+    {
+        "id": "user01",
+        "isManager": false,
+        "name": "김철수",
+        "password": "pass01"
+    },
+    {
+        "id": "admin",
+        "isManager": true,
+        "name": "관리자",
+        "password": "adminpass"
+    },
+    {
+        "id": "user02",
+        "isManager": false,
+        "name": "이영희",
+        "password": "pass02"
+    },
+    {
+        "id": "user03",
+        "isManager": false,
+        "name": "박민수",
+        "password": "pass03"
+    },
+    {
+        "id": "manager01",
+        "isManager": true,
+        "name": "매니저1",
+        "password": "mgrpass"
+    },
+    {
+        "id": "user04",
+        "isManager": false,
+        "name": "최지영",
+        "password": "pass04"
+    },
+    {
+        "id": "user05",
+        "isManager": false,
+        "name": "정우진",
+        "password": "pass05"
+    },
+    {
+        "id": "user06",
+        "isManager": false,
+        "name": "한아름",
+        "password": "pass06"
+    },
+    {
+        "id": "admin02",
+        "isManager": true,
+        "name": "총관리자",
+        "password": "superadmin"
+    },
+    {
+        "id": "normal",
+        "isManager": false,
+        "name": "유재석",
+        "password": "pass07"
+    },
+    {
+        "id": "smileynm",
+        "isManager": true,
+        "name": "이건우",
+        "password": "001528"
+    },
+    {
+        "id": "KMS",
+        "isManager": false,
+        "name": "김민성",
+        "password": "0000"
+    },
+    {
+        "id": "helloworld",
+        "isManager": false,
+        "name": "홍길동",
+        "password": "0000"
+    },
+    {
+        "id": "123",
+        "isManager": false,
+        "name": "123",
+        "password": "123"
+    },
+    {
+        "id": "a",
+        "isManager": false,
+        "name": "a",
+        "password": "a"
+    },
+    {
+        "id": "b",
+        "isManager": false,
+        "name": "b",
+        "password": "b"
+    }
+]
