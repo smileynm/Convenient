@@ -11,29 +11,40 @@ NormalOrderForm::NormalOrderForm(QWidget *parent)
     ui->toolBox->setCurrentIndex(6);
     ui->stackedWidget->setCurrentIndex(6);
 
+    // 각 위젯에 대한 헤더 설정 및 컬럼 개수 설정
     QStringList headers;
     headers << "상품명" << "상품ID" << "가격" << "카테고리";
+    // 전체 위젯
     ui->allWidget->setColumnCount(headers.size());
     ui->allWidget->setHorizontalHeaderLabels(headers);
+    // 음료 위젯
     ui->beverageWidget->setColumnCount(headers.size());
     ui->beverageWidget->setHorizontalHeaderLabels(headers);
+    // 스낵 위젯
     ui->snackWidget->setColumnCount(headers.size());
     ui->snackWidget->setHorizontalHeaderLabels(headers);
+    // 즉석식품 위젯
     ui->instantWidget->setColumnCount(headers.size());
     ui->instantWidget->setHorizontalHeaderLabels(headers);
+    // 유제품/아이스크림 위젯
     ui->milkiceWidget->setColumnCount(headers.size());
     ui->milkiceWidget->setHorizontalHeaderLabels(headers);
+    // 주류 위젯
     ui->drinkWidget->setColumnCount(headers.size());
     ui->drinkWidget->setHorizontalHeaderLabels(headers);
+    // 생필품 위젯
     ui->neceWidget->setColumnCount(headers.size());
     ui->neceWidget->setHorizontalHeaderLabels(headers);
+    // 사용자 장바구니 위젯
     ui->orderWidget->setColumnCount(headers.size());
     ui->orderWidget->setHorizontalHeaderLabels(headers);
 
+    // 상품 관리자 인스턴스 호출 및 상품 카탈로그 QMap 형태의 상품 리스트 호출
     ProductManager& productManager = ProductManager::getInstance();
     QMap<QString, Product*> productCatalog;
     productCatalog = productManager.getProductMap();
 
+    // 호출된 상품 리스트의 개수에 맞게 각 카테고리별 위젯의 행 개수 설정
     ui->allWidget->setRowCount(productCatalog.size());
     ui->beverageWidget->setRowCount(productCatalog.size());
     ui->snackWidget->setRowCount(productCatalog.size());
@@ -43,6 +54,7 @@ NormalOrderForm::NormalOrderForm(QWidget *parent)
     ui->neceWidget->setRowCount(productCatalog.size());
     ui->orderWidget->setRowCount(orderCount);
 
+    // 제목에 해당하는 각 위젯 열 크기 조절
     ui->allWidget->setColumnWidth(0, 250);
     ui->beverageWidget->setColumnWidth(0, 250);
     ui->snackWidget->setColumnWidth(0, 250);
@@ -52,6 +64,7 @@ NormalOrderForm::NormalOrderForm(QWidget *parent)
     ui->neceWidget->setColumnWidth(0, 250);
     ui->orderWidget->setColumnWidth(0, 250);
 
+    // 이터레이터 선언 및 각 카테고리별 행 변수 선언
     auto it = productCatalog.constBegin();
     int beverageRow = 0;
     int snackRow = 0;
@@ -60,6 +73,7 @@ NormalOrderForm::NormalOrderForm(QWidget *parent)
     int drinkRow = 0;
     int neceRow = 0;
 
+    // 일단 모든 상품 목록을 전체 카테고리 위젯에 출력
     for (int row=0; row<productCatalog.size(); ++row, ++it) {
         QTableWidgetItem *nameItem = new QTableWidgetItem(it.value()->getProductName());
         QTableWidgetItem *idItem = new QTableWidgetItem(it.value()->getProductID());
@@ -71,7 +85,8 @@ NormalOrderForm::NormalOrderForm(QWidget *parent)
         ui->allWidget->setItem(row, 3, categoryItem);
     }
 
-
+    // 카테고리가 "음료" 인 경우
+    // 음료 테이블 위젯에 음료만 출력
     for (it = productCatalog.constBegin(); it!=productCatalog.constEnd(); ++it) {
         if (it.value()->getProductCategory() == "음료") {
             QTableWidgetItem *beverageName = new QTableWidgetItem(it.value()->getProductName());
@@ -86,6 +101,8 @@ NormalOrderForm::NormalOrderForm(QWidget *parent)
         }
     }
 
+    // 카테고리가 "스낵" 인 경우
+    // 스낵 테이블 위젯에 스낵만 출력
     for (it = productCatalog.constBegin(); it!=productCatalog.constEnd(); ++it) {
         if (it.value()->getProductCategory() == "스낵") {
             QTableWidgetItem *snackName = new QTableWidgetItem(it.value()->getProductName());
@@ -100,6 +117,8 @@ NormalOrderForm::NormalOrderForm(QWidget *parent)
         }
     }
 
+    // 카테고리가 "즉석식품" 인 경우
+    // 즉석식품 테이블 위젯에 즉석식품만 출력
     for (it = productCatalog.constBegin(); it!=productCatalog.constEnd(); ++it) {
         if (it.value()->getProductCategory() == "즉석식품") {
             QTableWidgetItem *nameItem = new QTableWidgetItem(it.value()->getProductName());
@@ -114,6 +133,7 @@ NormalOrderForm::NormalOrderForm(QWidget *parent)
         }
     }
 
+    // 카테고리가 "유제품/아이스크림" 인 경우
     for (it = productCatalog.constBegin(); it!=productCatalog.constEnd(); ++it) {
         if (it.value()->getProductCategory() == "유제품/아이스크림") {
             QTableWidgetItem *nameItem = new QTableWidgetItem(it.value()->getProductName());
@@ -128,6 +148,7 @@ NormalOrderForm::NormalOrderForm(QWidget *parent)
         }
     }
 
+    // 카테고리가 "주류" 인 경우
     for (it = productCatalog.constBegin(); it!=productCatalog.constEnd(); ++it) {
         if (it.value()->getProductCategory() == "주류") {
             QTableWidgetItem *nameItem = new QTableWidgetItem(it.value()->getProductName());
@@ -142,6 +163,7 @@ NormalOrderForm::NormalOrderForm(QWidget *parent)
         }
     }
 
+    // 생활용품
     for (it = productCatalog.constBegin(); it!=productCatalog.constEnd(); ++it) {
         if (it.value()->getProductCategory() == "생활용품") {
             QTableWidgetItem *nameItem = new QTableWidgetItem(it.value()->getProductName());
@@ -156,6 +178,7 @@ NormalOrderForm::NormalOrderForm(QWidget *parent)
         }
     }
 
+    // 출력된 각 카테고리별 행 수에 맞게 행 개수 재조정
     ui->beverageWidget->setRowCount(beverageRow);
     ui->snackWidget->setRowCount(snackRow);
     ui->instantWidget->setRowCount(instantRow);
@@ -163,6 +186,8 @@ NormalOrderForm::NormalOrderForm(QWidget *parent)
     ui->drinkWidget->setRowCount(drinkRow);
     ui->neceWidget->setRowCount(neceRow);
 
+    // 점주 입장에서는 상품 카테고리의 수정권이 없다.
+    // 본사에서 제공하는 내용이기 때문.
     ui->allWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
     ui->beverageWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
     ui->snackWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
@@ -171,9 +196,11 @@ NormalOrderForm::NormalOrderForm(QWidget *parent)
     ui->drinkWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
     ui->neceWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
 
+    // 프로그램 시작 시, 전체 카테고리를 default(6번째 툴바/위젯)로 표시할 것.
     ui->toolBox->setCurrentIndex(6);
     ui->stackedWidget->setCurrentIndex(6);
 
+    // 각 상품 리스트의 아이템을 더블클릭할 경우, 시그널 슬롯 연결
     connect(ui->allWidget, &QTableWidget::itemDoubleClicked, this, &NormalOrderForm::onItemDoubleClicked);
     connect(ui->beverageWidget, &QTableWidget::itemDoubleClicked, this, &NormalOrderForm::onItemDoubleClicked);
     connect(ui->snackWidget, &QTableWidget::itemDoubleClicked, this, &NormalOrderForm::onItemDoubleClicked);
@@ -199,16 +226,21 @@ void NormalOrderForm::onItemDoubleClicked(QTableWidgetItem *item) {
     QTableWidgetItem *priceItem = new QTableWidgetItem();
     QTableWidgetItem *categoryItem = new QTableWidgetItem();
 
+    // 더블클릭 된 상품의 각 정보를 복사
     nameItem->setText(item->tableWidget()->item(row, 0)->text());
     idItem->setText(item->tableWidget()->item(row, 1)->text());
     priceItem->setText(item->tableWidget()->item(row, 2)->text());
     categoryItem->setText(item->tableWidget()->item(row, 3)->text());
 
+    // 디버깅 메시지
     qDebug() << nameItem->text() << idItem->text() << priceItem->text() << categoryItem->text();
 
+    // 장바구니의 행 개수 추가
     increaseOrderCount();
     ui->orderWidget->setRowCount(getOrderCount());
     qDebug() << getOrderCount();
+
+    // 해당 행에 더블클릭되었던 상품 정보 입력
     ui->orderWidget->setItem(getOrderCount()-1, 0, nameItem);
     ui->orderWidget->setItem(getOrderCount()-1, 1, idItem);
     ui->orderWidget->setItem(getOrderCount()-1, 2, priceItem);
