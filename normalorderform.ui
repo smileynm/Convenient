@@ -128,7 +128,7 @@
       <x>0</x>
       <y>0</y>
       <width>170</width>
-      <height>48</height>
+      <height>90</height>
      </rect>
     </property>
     <attribute name="label">
@@ -141,7 +141,7 @@
       <x>0</x>
       <y>0</y>
       <width>170</width>
-      <height>48</height>
+      <height>90</height>
      </rect>
     </property>
     <attribute name="label">
@@ -154,7 +154,7 @@
       <x>0</x>
       <y>0</y>
       <width>170</width>
-      <height>48</height>
+      <height>90</height>
      </rect>
     </property>
     <attribute name="label">
@@ -167,7 +167,7 @@
       <x>0</x>
       <y>0</y>
       <width>170</width>
-      <height>48</height>
+      <height>90</height>
      </rect>
     </property>
     <attribute name="label">
@@ -180,7 +180,7 @@
       <x>0</x>
       <y>0</y>
       <width>170</width>
-      <height>48</height>
+      <height>90</height>
      </rect>
     </property>
     <attribute name="label">
@@ -193,7 +193,7 @@
       <x>0</x>
       <y>0</y>
       <width>170</width>
-      <height>48</height>
+      <height>90</height>
      </rect>
     </property>
     <attribute name="label">
@@ -206,7 +206,7 @@
       <x>0</x>
       <y>0</y>
       <width>170</width>
-      <height>48</height>
+      <height>90</height>
      </rect>
     </property>
     <attribute name="label">
@@ -214,11 +214,11 @@
     </attribute>
    </widget>
   </widget>
-  <widget class="QTableWidget" name="tableWidget">
+  <widget class="QTableWidget" name="orderWidget">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>350</y>
+     <y>320</y>
      <width>600</width>
      <height>200</height>
     </rect>

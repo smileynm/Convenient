@@ -63,16 +63,13 @@ AdminProductForm::AdminProductForm(QWidget *parent)
         QTableWidgetItem *idItem = new QTableWidgetItem(it.value()->getProductID());
         QTableWidgetItem *priceItem = new QTableWidgetItem(QString::number(it.value()->getProductPrice()));
         QTableWidgetItem *categoryItem = new QTableWidgetItem(it.value()->getProductCategory());
-        //int beverageRow = 0;
-
         ui->allWidget->setItem(row, 0, nameItem);
         ui->allWidget->setItem(row, 1, idItem);
         ui->allWidget->setItem(row, 2, priceItem);
         ui->allWidget->setItem(row, 3, categoryItem);
     }
 
-    it = productCatalog.constBegin();
-    for (int row=0; row<productCatalog.size(); ++row, ++it) {
+    for (it = productCatalog.constBegin(); it!=productCatalog.constEnd(); ++it) {
         if (it.value()->getProductCategory() == "음료") {
             QTableWidgetItem *beverageName = new QTableWidgetItem(it.value()->getProductName());
             QTableWidgetItem *beverageID = new QTableWidgetItem(it.value()->getProductID());
@@ -84,10 +81,9 @@ AdminProductForm::AdminProductForm(QWidget *parent)
             ui->beverageWidget->setItem(beverageRow, 3, beverageCategory);
             beverageRow++;
         }
-    } // 이 이후로 모든 카테고리를 동일하게 작성하는 작업 추가
+    }
 
-    it = productCatalog.constBegin();
-    for (int row=0; row<productCatalog.size(); ++row, ++it) {
+    for (it = productCatalog.constBegin(); it!=productCatalog.constEnd(); ++it) {
         if (it.value()->getProductCategory() == "스낵") {
             QTableWidgetItem *snackName = new QTableWidgetItem(it.value()->getProductName());
             QTableWidgetItem *snackID = new QTableWidgetItem(it.value()->getProductID());
@@ -101,8 +97,7 @@ AdminProductForm::AdminProductForm(QWidget *parent)
         }
     }
 
-    it = productCatalog.constBegin();
-    for (int row=0; row<productCatalog.size(); ++row, ++it) {
+    for (it = productCatalog.constBegin(); it!=productCatalog.constEnd(); ++it) {
         if (it.value()->getProductCategory() == "즉석식품") {
             QTableWidgetItem *nameItem = new QTableWidgetItem(it.value()->getProductName());
             QTableWidgetItem *idItem = new QTableWidgetItem(it.value()->getProductID());
@@ -116,8 +111,7 @@ AdminProductForm::AdminProductForm(QWidget *parent)
         }
     }
 
-    it = productCatalog.constBegin();
-    for (int row=0; row<productCatalog.size(); ++row, ++it) {
+    for (it = productCatalog.constBegin(); it!=productCatalog.constEnd(); ++it) {
         if (it.value()->getProductCategory() == "유제품/아이스크림") {
             QTableWidgetItem *nameItem = new QTableWidgetItem(it.value()->getProductName());
             QTableWidgetItem *idItem = new QTableWidgetItem(it.value()->getProductID());
@@ -131,8 +125,7 @@ AdminProductForm::AdminProductForm(QWidget *parent)
         }
     }
 
-    it = productCatalog.constBegin();
-    for (int row=0; row<productCatalog.size(); ++row, ++it) {
+    for (it = productCatalog.constBegin(); it!=productCatalog.constEnd(); ++it) {
         if (it.value()->getProductCategory() == "주류") {
             QTableWidgetItem *nameItem = new QTableWidgetItem(it.value()->getProductName());
             QTableWidgetItem *idItem = new QTableWidgetItem(it.value()->getProductID());
@@ -146,8 +139,7 @@ AdminProductForm::AdminProductForm(QWidget *parent)
         }
     }
 
-    it = productCatalog.constBegin();
-    for (int row=0; row<productCatalog.size(); ++row, ++it) {
+    for (it = productCatalog.constBegin(); it!=productCatalog.constEnd(); ++it) {
         if (it.value()->getProductCategory() == "생활용품") {
             qDebug() << neceRow;
             QTableWidgetItem *nameItem = new QTableWidgetItem(it.value()->getProductName());
